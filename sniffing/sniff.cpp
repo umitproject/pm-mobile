@@ -1,5 +1,5 @@
  #include <pcap.h>
- #include <iostream>
+ #include <stdio.h>
  #include <string.h>
  #include <stdlib.h>
  #include <ctype.h>
@@ -8,6 +8,8 @@
  #include <sys/socket.h>
  #include <netinet/in.h>
  #include <arpa/inet.h>
+#include "sniff.h"
+#include<jni.h>
 
 
 #define SIZE_ETHERNET 14
@@ -64,16 +66,13 @@ struct sniff_tcp {
         u_short th_urp;                 /* urgent pointer */
 };
 
-
-
 using namespace std;
-
-
+string out;
 
 void callback(u_char *args,const struct pcap_pkthdr *header, const u_char *packet)
 {
 
-	cout<<"call back called!!"<<endl;
+	printf("call back called!!\n");
 	const struct sniff_ethernet *ethernet;	/*ethernet header*/
 	const struct sniff_ip *ip;		/*ip header*/
 	const struct sniff_tcp *tcp;		/*tcp header*/
@@ -89,35 +88,35 @@ void callback(u_char *args,const struct pcap_pkthdr *header, const u_char *packe
 	size_ip=IP_HL(ip)*4;
 
 	/*fetching data from headers*/
-	cout<<"From : "<<inet_ntoa(ip->ip_src)<<endl;
-	cout<<"To : "<<inet_ntoa(ip->ip_dst)<<endl;
+	printf("From : %s\n",inet_ntoa(ip->ip_src));
+	printf("To : %s\n",inet_ntoa(ip->ip_dst));
 
 	/*getting the packet type*/
 	switch(ip->ip_p)
 	{
 		case IPPROTO_TCP:
-			cout<<"Protocol:TCP"<<endl;
+			printf("Protocol:TCP\n");
 			break;
 		case IPPROTO_UDP:
-			cout<<"Protocol:UDP"<<endl;
+			printf("Protocol:UDP\n");
 			return;
 		case IPPROTO_ICMP:
-			cout<<"Protocol:ICMP"<<endl;
+			printf("Protocol:ICMP\n");
 			return;
 		case IPPROTO_IP:
-			cout<<"Protocol:IP"<<endl;
+			printf("Protocol:IP\n");
 			return;
 		default:
-			cout<<"Unknown Protocol o.O"<<endl;
+			printf("Unknown Protocol: o.O\n");
 	}
 	tcp=(struct sniff_tcp*)(packet + SIZE_ETHERNET + size_ip);
 	size_tcp=TH_OFF(tcp)*4;
 	if(size_tcp<20){
-		cout<<"Invalid TCP header length: "<< size_tcp<<"bytes"<<endl;
+		printf("Invalid TCP header length: "<< size_tcp<<"bytes\n");
 		return;
 	}
-	cout<<"Source port:"<<ntohs(tcp->th_sport)<<endl;
-	cout<<"Destination port:"<<ntohs(tcp->th_dport)<<endl;
+	printf("Source port: %d\n",ntohs(tcp->th_sport));
+	printf("Destination port: %d\n",ntohs(tcp->th_dport));
 
 	/* fetching payload*/
 //	payload = (u_char *)(packet + SIZE_ETHERNET + size_ip + size_tcp);
@@ -127,7 +126,8 @@ void callback(u_char *args,const struct pcap_pkthdr *header, const u_char *packe
 //		cout<<"Payload("<<size_payload<<" bytes):"<<endl;
 //	}
 }
-int sniff()
+//int sniff()
+JNIEXPORT jint JNICALL Java_sniff_Sniff(JNIEnv *env, jobject obj)
 {
 	pcap_t *handle;			/* Session handle */
 	char *dev;			/* The device to sniff on */
@@ -143,41 +143,41 @@ int sniff()
 	/* Define the device */
 	dev = pcap_lookupdev(errbuf);
 	if (dev == NULL) {
-		cout <<"Couldn't find default device:" << errbuf<<endl;
-		return(2);
+		printf("Couldn't find default device: %s\n",errbuf);
+		return((jint)2);
 	}
 	else{
-		cout<<"Device :"<<dev<<endl;
-		cout<<"Filter Expression :"<<filter_exp<<endl;
+		printf("Device :%s\n",dev);;
+		"Filter Expression :"<<filter_exp<<endl;
 	}
 	/* Find the properties for the device */
 	if (pcap_lookupnet(dev, &net, &mask, errbuf) == -1) {
-		cout<<"Couldn't get netmask for device "<<dev<<" : "<<errbuf<<endl;
+		printf("Couldn't get netmask for device %s: %s\n",dev,errbuf);
 		net = 0;
 		mask = 0;
 	}
 	/* Open the session in promiscuous mode */
 	handle = pcap_open_live(dev, BUFSIZ, 1, 1000, errbuf);
 	if (handle == NULL) {
-		cout<<"Couldn't open device "<< dev<<" : "<<errbuf<<endl;
-		return(2);
+		printf("Couldn't open device %s : %s\n",dev,errbuf);;
+		return((jint)2);
 	}
 	/* Compile and apply the filter */
 	if (pcap_compile(handle, &fp, filter_exp, 0, net) == -1) {
-		cout<<"Couldn't parse filter "<<filter_exp<<" :"<< pcap_geterr(handle)<<endl;
-		return(2);
+		printf("Couldn't parse filter %s: %s \n",filter_exp, pcap_geterr(handle));;
+		return((jint)2);
 	}
 	if (pcap_setfilter(handle, &fp) == -1) {
-		cout<<"Couldn't install filter "<<filter_exp<<" :"<<pcap_geterr(handle)<<endl;
-		return(2);
+		printf("Couldn't install filter %s: %s\n",filter_exp,pcap_geterr(handle));
+		return((jint)2);
 	}
 	/* Grab packets */
-	cout<<"pcap_loop will be called"<<endl;
+	printf("pcap_loop will be called\n");;
 	packet = pcap_next(handle, &header);
 	/* Print its length */
 	printf("Jacked a packet with length of [%d]\n", header.len);
 	pcap_loop(handle,10,callback,NULL);
-	cout<<"pcap_loop done"<<endl;
+	printf("pcap_loop done\n");
 	/* And close the session */
 	pcap_close(handle);
 	pcap_freecode(&fp);
@@ -186,6 +186,6 @@ int sniff()
 int main(int argv,char **argc)
 {
 	int r;
-	r=sniff();
+//	r=sniff();
 	return 0;
 }
