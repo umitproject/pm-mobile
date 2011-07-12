@@ -1,4 +1,4 @@
-/home/d34th4ck3r/Documents/UMIT/USOC/libpcap_final/obj/local/armeabi/objs/pcap/savefile.o: \
+/home/d34th4ck3r/Documents/UMIT/USOC/Test/obj/local/armeabi/objs/pcap/savefile.o: \
  /home/d34th4ck3r/Documents/Android/NDK/android-ndk/external/libpcap/savefile.c \
  /home/d34th4ck3r/Documents/Android/NDK/android-ndk/external/libpcap/config.h \
  /home/d34th4ck3r/Documents/Android/NDK/android-ndk/platforms/android-4/arch-arm/usr/include/errno.h \

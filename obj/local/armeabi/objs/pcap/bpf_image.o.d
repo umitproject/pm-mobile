@@ -1,4 +1,4 @@
-/home/d34th4ck3r/Documents/UMIT/USOC/libpcap_final/obj/local/armeabi/objs/pcap/bpf_image.o: \
+/home/d34th4ck3r/Documents/UMIT/USOC/Test/obj/local/armeabi/objs/pcap/bpf_image.o: \
  /home/d34th4ck3r/Documents/Android/NDK/android-ndk/external/libpcap/bpf_image.c \
  /home/d34th4ck3r/Documents/Android/NDK/android-ndk/external/libpcap/config.h \
  /home/d34th4ck3r/Documents/Android/NDK/android-ndk/platforms/android-4/arch-arm/usr/include/stdio.h \

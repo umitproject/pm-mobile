@@ -1,0 +1,7 @@
+How to run:
+
+1)Push the binary named "sniff" in the libs/armeabi/ folder to /data/local/ by running following commands in libs/armeabi directory:
+
+-$adb push sniff /data/local/
+
+2)Run the code from eclipse in the real device.
