@@ -5,6 +5,7 @@ import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 
 public class Background extends AsyncTask<String, String, Long> {
@@ -23,6 +24,7 @@ public class Background extends AsyncTask<String, String, Long> {
 		        
 		        int i=1;
 		        String line=null;
+		        Intent broadcastIntent = new Intent();
 		        while ((line = in.readLine()) != null) {  
 		        	 publishProgress(line);
 //		        	 System.out.println(line+"\n");
@@ -44,12 +46,12 @@ public class Background extends AsyncTask<String, String, Long> {
     }
 
     protected void onProgressUpdate(String ... progress) {
-       MainActivity.print(progress[0]+"\n");
+//       MainActivity.print(progress[0]+"\n");
     }
 
     protected void onPostExecute(Long result) {
 
-	       MainActivity.print("scanned\n");
+//	       MainActivity.print("scanned\n");
     }
     
     protected void onCancelled(){
