@@ -119,8 +119,8 @@ return;
 
 void print_payload(const u_char *payload, int len)
 {
-	int len_rem=len;
-	int line_width=16;	/* Width of payload(fixed)*/
+/*	int len_rem=len;
+	int line_width=16;	// Width of payload(fixed)
 	int line_len;
 	int offset=0;
 	const u_char *ch = payload;
@@ -147,7 +147,7 @@ void print_payload(const u_char *payload, int len)
 			print_hex_ascii_line(ch,len_rem, offset);
 			break;
 		}
-	}
+	}*/
 }
 
 
@@ -171,8 +171,8 @@ void callback(u_char *args,const struct pcap_pkthdr *header, const u_char *packe
 	size_ip=IP_HL(ip)*4;
 
 	/*fetching data from headers*/
-	printf("From : %s\n",inet_ntoa(ip->ip_src));
-	printf("To : %s\n",inet_ntoa(ip->ip_dst));
+	printf("Source : %s\n",inet_ntoa(ip->ip_src));
+	printf("Destination : %s\n",inet_ntoa(ip->ip_dst));
 
 	/*getting the packet type*/
 	switch(ip->ip_p)
@@ -199,8 +199,8 @@ void callback(u_char *args,const struct pcap_pkthdr *header, const u_char *packe
 		printf("Invalid TCP header length: %d bytes\n",size_tcp);
 		return;
 	}
-	printf("Source port: %d\n",ntohs(tcp->th_sport));
-	printf("Destination port: %d\n",ntohs(tcp->th_dport));
+	printf("Source port: %d   Destination port: %d\n",ntohs(tcp->th_sport),ntohs(tcp->th_dport));
+//	printf("Destination port: %d\n",ntohs(tcp->th_dport));
 
 	/* fetching payload*/
 	payload = (u_char *)(packet + SIZE_ETHERNET + size_ip + size_tcp);
@@ -208,6 +208,7 @@ void callback(u_char *args,const struct pcap_pkthdr *header, const u_char *packe
 
 	if(size_payload>0){
 		printf("Payload(%d)bytes\n",size_payload);
+		printf("Payload: ");
 		print_payload(payload,size_payload);
 	}
 }

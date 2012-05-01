@@ -2,13 +2,13 @@ package com.test;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.IOException;
+import java.io.File;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 import android.app.IntentService;
 import android.content.Intent;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.test.MainActivity.BroadcastPackets;
@@ -27,7 +27,7 @@ public class SniffingService extends IntentService{
 		System.out.println("SniffingService called");
 		 Toast.makeText(getApplicationContext(), "SniffingService called",Toast.LENGTH_SHORT).show();
 		try {		
-			root=Runtime.getRuntime().exec("su -c \"/data/local/sniff\"");
+			root=Runtime.getRuntime().exec("su -c \""+MainActivity.path+"/sniff"+"\"");
 		
 		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(root.getOutputStream()));
         BufferedReader in = new BufferedReader(new InputStreamReader(root.getInputStream()));
@@ -55,10 +55,9 @@ public class SniffingService extends IntentService{
 		}
 	}
 	public void onDestroy(){
-		
+		System.out.println("Destoying Process");
 		root.destroy();
-	
-	
+		System.out.println("Process Destroyed");
 	}
 
 }
