@@ -21,7 +21,7 @@ import android.widget.Toast;
 
 public class MainActivity extends ListActivity implements OnClickListener 
 {
-	public static String path="/data/local";
+	public static String path="/data/local/sniff";
 	static TextView tv;
 	ArrayList<Packet> Packets= new ArrayList<Packet>();
 	ArrayList<String> headers = new ArrayList<String>();
@@ -31,10 +31,11 @@ public class MainActivity extends ListActivity implements OnClickListener
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
+    	
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
-        
+        Helper.makeInternalCopy(getApplicationContext(),path, R.raw.sniff);
         
         Button button=(Button)findViewById(R.id.button);
         button.setOnClickListener(this);

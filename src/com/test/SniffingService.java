@@ -27,7 +27,7 @@ public class SniffingService extends IntentService{
 		System.out.println("SniffingService called");
 		 Toast.makeText(getApplicationContext(), "SniffingService called",Toast.LENGTH_SHORT).show();
 		try {		
-			root=Runtime.getRuntime().exec("su -c \""+MainActivity.path+"/sniff"+"\"");
+			root=Runtime.getRuntime().exec("su -c \""+MainActivity.path+"\"");
 		
 		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(root.getOutputStream()));
         BufferedReader in = new BufferedReader(new InputStreamReader(root.getInputStream()));
