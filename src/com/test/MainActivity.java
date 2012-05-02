@@ -2,6 +2,7 @@ package com.test;
 
 import java.util.ArrayList;
 
+import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -16,12 +17,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 public class MainActivity extends ListActivity implements OnClickListener 
 {
-	public static String path="/data/local/sniff";
+	public static String path;
 	static TextView tv;
 	ArrayList<Packet> Packets= new ArrayList<Packet>();
 	ArrayList<String> headers = new ArrayList<String>();
@@ -35,6 +35,7 @@ public class MainActivity extends ListActivity implements OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
+        path=Helper.getSniffBinaryPath(getApplicationContext());
         Helper.makeInternalCopy(getApplicationContext(),path, R.raw.sniff);
         
         Button button=(Button)findViewById(R.id.button);
@@ -50,10 +51,20 @@ public class MainActivity extends ListActivity implements OnClickListener
             public void onItemClick(AdapterView<?> parent, View view,
                 int position, long id) {
               // When clicked, show a toast with the TextView text
-              Toast.makeText(getApplicationContext(), ((TextView) view).getText(),
-                  Toast.LENGTH_SHORT).show();
-            }
-          });
+            	
+            	String Body="Protocol: "+Packets.get(position).protocol;
+            	if(Packets.get(position).payload!=null){
+            		Body=Body+"\n"+"Payload:" +Packets.get(position).payload+"\n";
+            	}
+            	  
+            	 AlertDialog.Builder asd= new AlertDialog.Builder(MainActivity.this);  
+                 asd.setMessage(Body)  
+                .setTitle("Details")  
+                 .setCancelable(true)  
+                 .show();    
+                }
+            });
+          
         
         IntentFilter filter = new IntentFilter(BroadcastPackets.Packet);
         filter.addCategory(Intent.CATEGORY_DEFAULT);
@@ -80,9 +91,9 @@ public class MainActivity extends ListActivity implements OnClickListener
 			}
 			else if(button.getText().equals("Stop")){
 				button.setText("Start");
-				Intent SniffingIntent1 = new Intent(this, SniffingService.class);
+				Intent SniffingIntent = new Intent(this, SniffingService.class);
 				System.out.println("Stoping Service");
-				stopService(SniffingIntent1);
+				stopService(SniffingIntent);
 				System.out.println("Service Stopped!");
 			}
 			break;
@@ -103,8 +114,10 @@ public class MainActivity extends ListActivity implements OnClickListener
 			System.out.println("Received: "+ packet);
 			//tv=(TextView)findViewById(R.id.textview);
 			//tv.append(text);
-			packet.header = intent.getStringExtra(SniffingService.packet);
-			packet.payload="payload";
+			packet.header = intent.getStringExtra("header");
+			packet.protocol = intent.getStringExtra("protocol");
+			packet.payload = intent.getStringExtra("payload");
+	//		packet.header=intent.getStringExtra("line");
 			Packets.add(packet);
 			adapter.notifyDataSetChanged();
 			}
@@ -115,6 +128,14 @@ public class MainActivity extends ListActivity implements OnClickListener
 		}
 		
 	}
+	public void onDestroy() {
+        super.onDestroy();
+
+        /*
+         * Kill application when the root activity is killed.
+         */
+        this.finish();
+    }
 	
 	
 

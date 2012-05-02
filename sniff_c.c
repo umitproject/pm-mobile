@@ -119,20 +119,20 @@ return;
 
 void print_payload(const u_char *payload, int len)
 {
-	int len_rem=len;
-	int line_width=16;	/* Width of payload(fixed)*/
-	int line_len;
-	int offset=0;
-	const u_char *ch = payload;
-	if(len<=0)
+	/*	int len_rem=len;
+		int line_width=16;	// Width of payload(fixed)
+		int line_len;
+		int offset=0;
+		const u_char *ch = payload;
+		if(len<=0)
 		return;
-	else if(len<=line_width)
-	{
+		else if(len<=line_width)
+		{
 		print_hex_ascii_line(ch,len,offset);
 		return;
-	}
-	while(1)
-	{
+		}
+		while(1)
+		{
 		line_len = line_width % len_rem;
 
 		print_hex_ascii_line(ch,line_len,offset);
@@ -144,10 +144,117 @@ void print_payload(const u_char *payload, int len)
 		offset = offset +line_width;
 
 		if(len_rem <=line_width){
-			print_hex_ascii_line(ch,len_rem, offset);
-			break;
+		print_hex_ascii_line(ch,len_rem, offset);
+		break;
 		}
+		}*/
+	const u_char *ch = payload;
+	int i;
+
+	if (len <= 0)
+		return;
+
+	int mode = 0;
+
+	char tmp =*ch;
+	for(i=0;i<len;i++)
+	{
+		temp=*(ch+i);
+		printf("%c",temp);
 	}
+/*	tmp[0] = *ch;
+	tmp[1] = *(ch + 1);
+	tmp[2] = *(ch + 2);
+	tmp[3] = *(ch + 3);
+	tmp[4] = '\0';
+
+	if (truncated > 0
+			&& !(tmp[0] == 'H' && tmp[1] == 'T' && tmp[2] == 'T' && tmp[3] == 'P')
+			&& !(tmp[0] == 'G' && tmp[1] == 'E' && tmp[2] == 'T')) {
+		mode = 7;
+	} else {
+		if (!(tmp[0] == 'G' && tmp[1] == 'E' && tmp[2] == 'T')) {
+			return;
+		}
+		host_idx = 0;
+		cookie_idx = 0;
+		host[host_idx] = '\0';
+		cookie[cookie_idx] = '\0';
+		truncated = 0;
+	}
+
+	for (i = 0; i <= len; i++) {
+		char c = *ch;
+
+		if (mode == 0 && (c == 'C' || c == 'c')) {
+			mode = 1;
+			truncated = 0;
+		} else if (mode == 1 && (c == 'o')) {
+			mode = 2;
+			truncated = 0;
+		} else if (mode == 2 && (c == 'o')) {
+			mode = 3;
+			truncated = 0;
+		} else if (mode == 3 && (c == 'k')) {
+			mode = 4;
+			truncated = 0;
+		} else if (mode == 4 && (c == 'i')) {
+			mode = 5;
+			truncated = 0;
+		} else if (mode == 5 && (c == 'e')) {
+			mode = 6;
+			truncated = 0;
+		} else if (mode == 6 && (c == ':')) {
+			mode = 7;
+		} else if (mode == 7 && c == '\n') {
+			cookie[cookie_idx] = '\0';
+			host[host_idx] = '\0';
+			printf("Cookie:%s|||Host=%s|||IP=%s\n", cookie, host, inet_ntoa(ip->ip_src));
+			fflush(stdout);
+			truncated = 0;
+			mode = 0;
+		} else if (mode == 15 && c == '\n') {
+			mode = 0;
+		} else if (mode == 0 && (c == 'H' || c == 'h')) {
+			mode = 11;
+		} else if (mode == 11 && (c == 'o')) {
+			mode = 12;
+		} else if (mode == 12 && (c == 's')) {
+			mode = 13;
+		} else if (mode == 13 && (c == 't')) {
+			mode = 14;
+		} else if (mode == 14 && (c == ':')) {
+			mode = 15;
+			i++; // remove space
+		} else if (mode == 7) {
+			if (isprint(c)) {
+				cookie[cookie_idx] = c;
+				if (cookie_idx < sizeof(cookie)) {
+					cookie_idx++;
+				} else {
+					printf("!!!OVERFLOW!!!");
+					fflush(stdout);
+				}
+			}
+		} else if (mode == 15) {
+			if (isprint(c)) {
+				host[host_idx] = c;
+				if (host_idx < sizeof(host)) {
+					host_idx++;
+				} else {
+					printf("!!!OVERFLOW!!!");
+					fflush(stdout);
+				}
+			}
+		} else {
+			mode = 0;
+		}
+		ch++;
+	}
+	if (mode == 7) {
+		truncated = 1;
+	}*/
+	return;
 }
 
 
@@ -171,8 +278,7 @@ void callback(u_char *args,const struct pcap_pkthdr *header, const u_char *packe
 	size_ip=IP_HL(ip)*4;
 
 	/*fetching data from headers*/
-	printf("From : %s\n",inet_ntoa(ip->ip_src));
-	printf("To : %s\n",inet_ntoa(ip->ip_dst));
+	printf("Source : %s   Desination: %s\n",inet_ntoa(ip->ip_src),inet_ntoa(ip->ip_dst));
 
 	/*getting the packet type*/
 	switch(ip->ip_p)
@@ -203,13 +309,13 @@ void callback(u_char *args,const struct pcap_pkthdr *header, const u_char *packe
 	printf("Destination port: %d\n",ntohs(tcp->th_dport));
 
 	/* fetching payload*/
-//	payload = (u_char *)(packet + SIZE_ETHERNET + size_ip + size_tcp);
-//	size_payload=ntohs(ip->ip_len)-(size_ip+size_tcp);
+	payload = (u_char *)(packet + SIZE_ETHERNET + size_ip + size_tcp);
+	size_payload=ntohs(ip->ip_len)-(size_ip+size_tcp);
 
-//	if(size_payload>0){
-//		printf("Payload(%d)bytes\n",size_payload);
-//		print_payload(payload,size_payload);
-//	}
+	if(size_payload>0){
+		printf("Payload(%d)bytes\n",size_payload);
+		print_payload(payload,size_payload);
+	}
 }
 int sniff()
 {

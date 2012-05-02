@@ -16,6 +16,7 @@ import com.test.MainActivity.BroadcastPackets;
 public class SniffingService extends IntentService{
 	Process root;
 	public static String packet= "packet";
+	Parser parser;
 	public SniffingService() {
 		super("SniffingService");
 		// TODO Auto-generated constructor stub
@@ -25,7 +26,7 @@ public class SniffingService extends IntentService{
 	protected void onHandleIntent(Intent arg0) {
 		// TODO Auto-generated method stub
 		System.out.println("SniffingService called");
-		 Toast.makeText(getApplicationContext(), "SniffingService called",Toast.LENGTH_SHORT).show();
+	//	 Toast.makeText(getApplicationContext(), "SniffingService called",Toast.LENGTH_SHORT).show();
 		try {		
 			root=Runtime.getRuntime().exec("su -c \""+MainActivity.path+"\"");
 		
@@ -33,15 +34,22 @@ public class SniffingService extends IntentService{
         BufferedReader in = new BufferedReader(new InputStreamReader(root.getInputStream()));
         int i=1;
         String line=null;
-        
+        int formed=0;
         
         while ((line = in.readLine()) != null) {
         	System.out.println("line read: "+ line );
+        	
+        	parser=new Parser(line);
+        	if (parser.parsed_packet==null)
+        		continue;
         	Intent broadcastIntent = new Intent();
             broadcastIntent.setAction(BroadcastPackets.Packet);
             broadcastIntent.addCategory(Intent.CATEGORY_DEFAULT);
-            
-            broadcastIntent.putExtra("packet", line+"\n");
+        	broadcastIntent.putExtra("header", parser.header());
+        	broadcastIntent.putExtra("protocol", parser.protocol());
+            broadcastIntent.putExtra("payload", parser.payload());
+    //    	broadcastIntent.putExtra("line", line);
+        	
             System.out.println("Sending Broadcast..");
         	sendBroadcast(broadcastIntent);	
         	System.out.println("Broadcast Send..");

@@ -119,11 +119,26 @@ return;
 
 void print_payload(const u_char *payload, int len)
 {
-/*	int len_rem=len;
-	int line_width=16;	// Width of payload(fixed)
-	int line_len;
-	int offset=0;
 	const u_char *ch = payload;
+	int i;
+
+	if (len <= 0)
+		return;
+
+	int mode = 0;
+
+	char tmp;
+	for(i=0;i<len;i++)
+	{
+		tmp=*(ch+i);
+		printf("%c",tmp);
+	}
+	printf("\n");
+	/*	int len_rem=len;
+		int line_width=16;	// Width of payload(fixed)
+		int line_len;
+		int offset=0;
+		const u_char *ch = payload;
 	if(len<=0)
 		return;
 	else if(len<=line_width)
@@ -155,7 +170,7 @@ void print_payload(const u_char *payload, int len)
 void callback(u_char *args,const struct pcap_pkthdr *header, const u_char *packet)
 {
 
-	printf("call back called!!\n");
+	printf("#call back called!!\n");
 	const struct sniff_ethernet *ethernet;	/*ethernet header*/
 	const struct sniff_ip *ip;		/*ip header*/
 	const struct sniff_tcp *tcp;		/*tcp header*/
@@ -171,43 +186,41 @@ void callback(u_char *args,const struct pcap_pkthdr *header, const u_char *packe
 	size_ip=IP_HL(ip)*4;
 
 	/*fetching data from headers*/
-	printf("Source : %s\n",inet_ntoa(ip->ip_src));
-	printf("Destination : %s\n",inet_ntoa(ip->ip_dst));
+	printf("Source: %s  Destination: %s | ",inet_ntoa(ip->ip_src),inet_ntoa(ip->ip_dst));
 
 	/*getting the packet type*/
 	switch(ip->ip_p)
 	{
 		case IPPROTO_TCP:
-			printf("Protocol:TCP\n");
+			printf("Protocol:TCP | ");
 			break;
 		case IPPROTO_UDP:
-			printf("Protocol:UDP\n");
+			printf("Protocol:UDP | ");
 			return;
 		case IPPROTO_ICMP:
-			printf("Protocol:ICMP\n");
+			printf("Protocol:ICMP | ");
 			return;
 		case IPPROTO_IP:
-			printf("Protocol:IP\n");
+			printf("Protocol:IP | ");
 			return;
 		default:
-			printf("Unknown Protocol: o.O\n");
+			printf("Protocol: Unknown o.O | ");
 			return;
 	}
 	tcp=(struct sniff_tcp*)(packet + SIZE_ETHERNET + size_ip);
 	size_tcp=TH_OFF(tcp)*4;
 	if(size_tcp<20){
-		printf("Invalid TCP header length: %d bytes\n",size_tcp);
+		printf("#Invalid TCP header length: %d bytes\n",size_tcp);
 		return;
 	}
-	printf("Source port: %d   Destination port: %d\n",ntohs(tcp->th_sport),ntohs(tcp->th_dport));
-//	printf("Destination port: %d\n",ntohs(tcp->th_dport));
+	printf("Source port: %d   Destination port: %d | ",ntohs(tcp->th_sport),ntohs(tcp->th_dport));
 
 	/* fetching payload*/
 	payload = (u_char *)(packet + SIZE_ETHERNET + size_ip + size_tcp);
 	size_payload=ntohs(ip->ip_len)-(size_ip+size_tcp);
 
 	if(size_payload>0){
-		printf("Payload(%d)bytes\n",size_payload);
+		printf("#Payload(%d)bytes\n",size_payload);
 		printf("Payload: ");
 		print_payload(payload,size_payload);
 	}
@@ -228,41 +241,41 @@ int sniff()
 	/* Define the device */
 	dev = pcap_lookupdev(errbuf);
 	if (dev == NULL) {
-		printf("Couldn't find default device: %s\n",errbuf);
+		printf("#Couldn't find default device: %s\n",errbuf);
 		return(2);
 	}
 	else{
-		printf("Device :%s\n",dev);;
-		printf("Filter Expression : %s\n",filter_exp);
+		printf("#Device :%s\n",dev);;
+		printf("#Filter Expression : %s\n",filter_exp);
 	}
 	/* Find the properties for the device */
 	if (pcap_lookupnet(dev, &net, &mask, errbuf) == -1) {
-		printf("Couldn't get netmask for device %s: %s\n",dev,errbuf);
+		printf("#Couldn't get netmask for device %s: %s\n",dev,errbuf);
 		net = 0;
 		mask = 0;
 	}
 	/* Open the session in promiscuous mode */
 	handle = pcap_open_live(dev, BUFSIZ, 1, 1000, errbuf);
 	if (handle == NULL) {
-		printf("Couldn't open device %s : %s\n",dev,errbuf);;
+		printf("#Couldn't open device %s : %s\n",dev,errbuf);;
 		return(2);
 	}
 	/* Compile and apply the filter */
 	if (pcap_compile(handle, &fp, filter_exp, 0, net) == -1) {
-		printf("Couldn't parse filter %s: %s \n",filter_exp, pcap_geterr(handle));;
+		printf("#Couldn't parse filter %s: %s \n",filter_exp, pcap_geterr(handle));;
 		return(2);
 	}
 	if (pcap_setfilter(handle, &fp) == -1) {
-		printf("Couldn't install filter %s: %s\n",filter_exp,pcap_geterr(handle));
+		printf("#Couldn't install filter %s: %s\n",filter_exp,pcap_geterr(handle));
 		return(2);
 	}
 	/* Grab packets */
-	printf("pcap_loop will be called\n");;
+	printf("#pcap_loop will be called\n");;
 	packet = pcap_next(handle, &header);
 	/* Print its length */
-	printf("Jacked a packet with length of [%d]\n", header.len);
+	printf("#Jacked a packet with length of [%d]\n", header.len);
 	pcap_loop(handle,0,callback,NULL);
-	printf("pcap_loop done\n");
+	printf("#pcap_loop done\n");
 	/* And close the session */
 	pcap_close(handle);
 	pcap_freecode(&fp);

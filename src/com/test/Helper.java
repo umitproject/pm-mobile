@@ -15,19 +15,11 @@ public class Helper  {
 		InputStream is=c.getResources().openRawResource(resource);
         try {
         	
-        	Toast.makeText(c, "Copying file",Toast.LENGTH_SHORT).show();
+       // 	Toast.makeText(c, "Copying file",Toast.LENGTH_SHORT).show();
             byte[] bytes = new byte[is.available()];
             DataInputStream dis = new DataInputStream(is);
             dis.readFully(bytes);   
-/*            FileOutputStream out ;
-            File sniff =new File(getSniffBinaryPath(c));
-            out = c.openFileOutput("sniff", Context.MODE_PRIVATE);
-            byte[] buffersniff= new byte[64];
-            while (dis.read(buffersniff) > -1) {
-                    out.write(buffersniff);
-            }
-            out.flush();
-            out.close();*/
+
             FileOutputStream setdbOutStream = new FileOutputStream(path);
             setdbOutStream.write(bytes);
             setdbOutStream.close();
@@ -39,7 +31,7 @@ public class Helper  {
             os.flush();
         }
         catch(Exception e){
-        	Toast.makeText(c, "Error Copying file: " + e.toString(),Toast.LENGTH_SHORT).show();
+//        	Toast.makeText(c, "Error Copying file: " + e.toString(),Toast.LENGTH_SHORT).show();
         	e.printStackTrace();
         }
 		
