@@ -30,20 +30,20 @@ public class Parser {
 	
 	public String header(){
 		System.out.println("Finding header for packet: "+ this.line);
-		if(parsed_packet[0]==null || parsed_packet[0].charAt(0)=='#'  )
+		if(parsed_packet[0]==null || parsed_packet[0].charAt(1)=='#'  )
 			return null;
 		return parsed_packet[0];
 		
 	}
 	public String protocol(){
 		System.out.println("Finding protocol for packet: "+ this.line);
-		if(parsed_packet[0]==null || parsed_packet[1].charAt(0)=='#')
+		if(parsed_packet[0]==null || parsed_packet[1].charAt(1)=='#')
 			return null;
 		return parsed_packet[1];
 	}
 	public String payload(){
 		System.out.println("Finding payload for packet: "+ this.line);
-		if(parsed_packet[2].charAt(0)=='#' || parsed_packet[2]==null)
+		if(parsed_packet[2].charAt(1)=='#' || parsed_packet[2]==null)
 			return null;
 		return parsed_packet[2];
 	}

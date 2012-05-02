@@ -52,7 +52,7 @@ public class MainActivity extends ListActivity implements OnClickListener
                 int position, long id) {
               // When clicked, show a toast with the TextView text
             	
-            	String Body="Protocol: "+Packets.get(position).protocol;
+            	String Body=Packets.get(position).protocol;
             	if(Packets.get(position).payload!=null){
             		Body=Body+"\n"+"Payload:" +Packets.get(position).payload+"\n";
             	}
