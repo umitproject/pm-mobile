@@ -1,0 +1,19 @@
+android.annotation.SuppressLint
+android.annotation.TargetApi
+com.test.BuildConfig
+com.test.Helper:
+    12:12:public Helper()
+com.test.MainActivity:
+    static android.widget.TextView tv
+com.test.MainActivity$BroadcastPackets:
+    public static final java.lang.String Packet
+com.test.NativeTask
+com.test.Operations
+com.test.Print
+com.test.R
+com.test.R$attr
+com.test.R$drawable
+com.test.R$id
+com.test.R$layout
+com.test.R$raw
+com.test.R$string

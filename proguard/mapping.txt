@@ -1,0 +1,33 @@
+com.lipcap.MainActivity -> com.lipcap.MainActivity:
+    void onCreate(android.os.Bundle) -> onCreate
+com.test.MainActivity -> com.test.MainActivity:
+    java.lang.String path -> a
+    java.util.ArrayList Packets -> b
+    java.util.ArrayList headers -> c
+    java.lang.String[] Packets_string -> d
+    android.widget.ArrayAdapter adapter -> e
+    void onCreate(android.os.Bundle) -> onCreate
+    void onClick(android.view.View) -> onClick
+    void onDestroy() -> onDestroy
+com.test.MainActivity$1 -> com.test.a:
+    com.test.MainActivity this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.test.MainActivity$BroadcastPackets -> com.test.MainActivity$BroadcastPackets:
+    com.test.MainActivity this$0 -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.test.Packet -> com.test.b:
+    java.lang.String header -> a
+    java.lang.String protocol -> b
+    java.lang.String ports -> c
+    java.lang.String payload -> d
+    java.lang.String toString() -> toString
+com.test.Parser -> com.test.c:
+    java.lang.String[] parsed_packet -> a
+    java.lang.String line -> b
+    java.lang.String payload() -> a
+com.test.SniffingService -> com.test.SniffingService:
+    java.lang.Process root -> a
+    java.lang.String packet -> b
+    com.test.Parser parser -> c
+    void onHandleIntent(android.content.Intent) -> onHandleIntent
+    void onDestroy() -> onDestroy

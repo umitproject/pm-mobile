@@ -1,0 +1,6 @@
+com.lipcap.MainActivity
+com.test.MainActivity
+com.test.MainActivity$BroadcastPackets
+com.test.NativeTask
+com.test.NativeTask: int runCommand(java.lang.String)
+com.test.SniffingService

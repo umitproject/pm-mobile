@@ -1,0 +1,2258 @@
+_____________________________________________________________________
++ Program class: com/lipcap/MainActivity
+  Superclass:    android/app/Activity
+  Major version: 0x31
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.lipcap.MainActivity extends android.app.Activity
+
+Interfaces (count = 0):
+
+Constant Pool (count = 27):
+  + Class [android/app/Activity]
+  + Class [android/widget/TextView]
+  + Class [com/lipcap/MainActivity]
+  + Methodref [android/app/Activity.<init> ()V]
+  + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+  + Methodref [android/widget/TextView.<init> (Landroid/content/Context;)V]
+  + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+  + Methodref [com/lipcap/MainActivity.setContentView (Landroid/view/View;)V]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Landroid/content/Context;)V]
+  + NameAndType [onCreate (Landroid/os/Bundle;)V]
+  + NameAndType [setContentView (Landroid/view/View;)V]
+  + NameAndType [setText (Ljava/lang/CharSequence;)V]
+  + Utf8 [()V]
+  + Utf8 [(Landroid/content/Context;)V]
+  + Utf8 [(Landroid/os/Bundle;)V]
+  + Utf8 [(Landroid/view/View;)V]
+  + Utf8 [(Ljava/lang/CharSequence;)V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [android/app/Activity]
+  + Utf8 [android/widget/TextView]
+  + Utf8 [com/lipcap/MainActivity]
+  + Utf8 [onCreate]
+  + Utf8 [setContentView]
+  + Utf8 [setText]
+
+Fields (count = 0):
+
+Methods (count = 2):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public MainActivity()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #4
+        + Methodref [android/app/Activity.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onCreate(Landroid/os/Bundle;)V
+    Access flags: 0x1
+      = public void onCreate(android.os.Bundle)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 25, locals = 2, stack = 3):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #5
+        + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+      [5] new #2
+        + Class [android/widget/TextView]
+      [8] dup
+      [9] aload_0 v0
+      [10] invokespecial #6
+        + Methodref [android/widget/TextView.<init> (Landroid/content/Context;)V]
+      [13] dup
+      [14] astore_1 v1
+      [15] aconst_null
+      [16] invokevirtual #7
+        + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [19] aload_0 v0
+      [20] aload_1 v1
+      [21] invokevirtual #8
+        + Methodref [com/lipcap/MainActivity.setContentView (Landroid/view/View;)V]
+      [24] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/test/MainActivity
+  Superclass:    android/app/ListActivity
+  Major version: 0x31
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.test.MainActivity extends android.app.ListActivity
+
+Interfaces (count = 1):
+  + Class [android/view/View$OnClickListener]
+
+Constant Pool (count = 294):
+  + Integer [2130903040]
+  + Integer [2130903041]
+  + Integer [2130968576]
+  + Integer [2131099648]
+  + String [
+]
+  + String [Item 1 ]
+  + String [Item 2]
+  + String [Service Stopped!]
+  + String [Start]
+  + String [Start Button Clicked]
+  + String [Starting Sniffing
+]
+  + String [Stop]
+  + String [Stoping Service]
+  + String [android.intent.category.DEFAULT]
+  + String [chmod 777 ]
+  + String [com.test.intent.action.MESSAGE_PROCESSED]
+  + String [exit
+]
+  + String [rm ]
+  + String [sniff]
+  + String [su]
+  + String [value]
+  + String [variable]
+  + Class [android/app/ListActivity]
+  + Class [android/content/Context]
+  + Class [android/content/Intent]
+  + Class [android/content/IntentFilter]
+  + Class [android/content/res/Resources]
+  + Class [android/view/View]
+  + Class [android/view/View$OnClickListener]
+  + Class [android/widget/ArrayAdapter]
+  + Class [android/widget/Button]
+  + Class [android/widget/ListView]
+  + Class [com/test/MainActivity]
+  + Class [com/test/MainActivity$BroadcastPackets]
+  + Class [com/test/SniffingService]
+  + Class [com/test/a]
+  + Class [java/io/DataInputStream]
+  + Class [java/io/DataOutputStream]
+  + Class [java/io/File]
+  + Class [java/io/FileOutputStream]
+  + Class [java/io/InputStream]
+  + Class [java/io/PrintStream]
+  + Class [java/lang/Exception]
+  + Class [java/lang/Object]
+  + Class [java/lang/Process]
+  + Class [java/lang/Runtime]
+  + Class [java/lang/String]
+  + Class [java/lang/StringBuilder]
+  + Class [java/lang/System]
+  + Class [java/util/ArrayList]
+  + Fieldref [com/test/MainActivity.a Ljava/lang/String;]
+  + Fieldref [com/test/MainActivity.b Ljava/util/ArrayList;]
+  + Fieldref [com/test/MainActivity.c Ljava/util/ArrayList;]
+  + Fieldref [com/test/MainActivity.d [Ljava/lang/String;]
+  + Fieldref [com/test/MainActivity.e Landroid/widget/ArrayAdapter;]
+  + Fieldref [java/io/File.separator Ljava/lang/String;]
+  + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+  + Methodref [android/app/ListActivity.<init> ()V]
+  + Methodref [android/app/ListActivity.onCreate (Landroid/os/Bundle;)V]
+  + Methodref [android/app/ListActivity.onDestroy ()V]
+  + Methodref [android/content/Context.getFilesDir ()Ljava/io/File;]
+  + Methodref [android/content/Context.getResources ()Landroid/content/res/Resources;]
+  + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  + Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+  + Methodref [android/content/IntentFilter.<init> (Ljava/lang/String;)V]
+  + Methodref [android/content/IntentFilter.addCategory (Ljava/lang/String;)V]
+  + Methodref [android/content/res/Resources.openRawResource (I)Ljava/io/InputStream;]
+  + Methodref [android/view/View.getId ()I]
+  + Methodref [android/widget/ArrayAdapter.<init> (Landroid/content/Context;ILjava/util/List;)V]
+  + Methodref [android/widget/Button.getText ()Ljava/lang/CharSequence;]
+  + Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
+  + Methodref [android/widget/Button.setText (Ljava/lang/CharSequence;)V]
+  + Methodref [android/widget/ListView.setOnItemClickListener (Landroid/widget/AdapterView$OnItemClickListener;)V]
+  + Methodref [com/test/MainActivity.findViewById (I)Landroid/view/View;]
+  + Methodref [com/test/MainActivity.finish ()V]
+  + Methodref [com/test/MainActivity.getApplicationContext ()Landroid/content/Context;]
+  + Methodref [com/test/MainActivity.getListView ()Landroid/widget/ListView;]
+  + Methodref [com/test/MainActivity.registerReceiver (Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;]
+  + Methodref [com/test/MainActivity.setContentView (I)V]
+  + Methodref [com/test/MainActivity.setListAdapter (Landroid/widget/ListAdapter;)V]
+  + Methodref [com/test/MainActivity.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
+  + Methodref [com/test/MainActivity.stopService (Landroid/content/Intent;)Z]
+  + Methodref [com/test/MainActivity$BroadcastPackets.<init> (Lcom/test/MainActivity;)V]
+  + Methodref [com/test/a.<init> (Lcom/test/MainActivity;)V]
+  + Methodref [java/io/DataInputStream.<init> (Ljava/io/InputStream;)V]
+  + Methodref [java/io/DataInputStream.readFully ([B)V]
+  + Methodref [java/io/DataOutputStream.<init> (Ljava/io/OutputStream;)V]
+  + Methodref [java/io/DataOutputStream.flush ()V]
+  + Methodref [java/io/DataOutputStream.writeBytes (Ljava/lang/String;)V]
+  + Methodref [java/io/File.<init> (Ljava/lang/String;)V]
+  + Methodref [java/io/File.exists ()Z]
+  + Methodref [java/io/File.getAbsolutePath ()Ljava/lang/String;]
+  + Methodref [java/io/FileOutputStream.<init> (Ljava/lang/String;)V]
+  + Methodref [java/io/FileOutputStream.close ()V]
+  + Methodref [java/io/FileOutputStream.write ([B)V]
+  + Methodref [java/io/InputStream.available ()I]
+  + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+  + Methodref [java/lang/Exception.printStackTrace ()V]
+  + Methodref [java/lang/Object.equals (Ljava/lang/Object;)Z]
+  + Methodref [java/lang/Process.getOutputStream ()Ljava/io/OutputStream;]
+  + Methodref [java/lang/Runtime.exec (Ljava/lang/String;)Ljava/lang/Process;]
+  + Methodref [java/lang/Runtime.getRuntime ()Ljava/lang/Runtime;]
+  + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
+  + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+  + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  + Methodref [java/util/ArrayList.<init> ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Landroid/content/Context;ILjava/util/List;)V]
+  + NameAndType [<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  + NameAndType [<init> (Lcom/test/MainActivity;)V]
+  + NameAndType [<init> (Ljava/io/InputStream;)V]
+  + NameAndType [<init> (Ljava/io/OutputStream;)V]
+  + NameAndType [<init> (Ljava/lang/String;)V]
+  + NameAndType [a Ljava/lang/String;]
+  + NameAndType [addCategory (Ljava/lang/String;)V]
+  + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + NameAndType [available ()I]
+  + NameAndType [b Ljava/util/ArrayList;]
+  + NameAndType [c Ljava/util/ArrayList;]
+  + NameAndType [close ()V]
+  + NameAndType [d [Ljava/lang/String;]
+  + NameAndType [e Landroid/widget/ArrayAdapter;]
+  + NameAndType [equals (Ljava/lang/Object;)Z]
+  + NameAndType [exec (Ljava/lang/String;)Ljava/lang/Process;]
+  + NameAndType [exists ()Z]
+  + NameAndType [findViewById (I)Landroid/view/View;]
+  + NameAndType [finish ()V]
+  + NameAndType [flush ()V]
+  + NameAndType [getAbsolutePath ()Ljava/lang/String;]
+  + NameAndType [getApplicationContext ()Landroid/content/Context;]
+  + NameAndType [getFilesDir ()Ljava/io/File;]
+  + NameAndType [getId ()I]
+  + NameAndType [getListView ()Landroid/widget/ListView;]
+  + NameAndType [getOutputStream ()Ljava/io/OutputStream;]
+  + NameAndType [getResources ()Landroid/content/res/Resources;]
+  + NameAndType [getRuntime ()Ljava/lang/Runtime;]
+  + NameAndType [getText ()Ljava/lang/CharSequence;]
+  + NameAndType [onCreate (Landroid/os/Bundle;)V]
+  + NameAndType [onDestroy ()V]
+  + NameAndType [openRawResource (I)Ljava/io/InputStream;]
+  + NameAndType [out Ljava/io/PrintStream;]
+  + NameAndType [printStackTrace ()V]
+  + NameAndType [println (Ljava/lang/String;)V]
+  + NameAndType [putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+  + NameAndType [readFully ([B)V]
+  + NameAndType [registerReceiver (Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;]
+  + NameAndType [separator Ljava/lang/String;]
+  + NameAndType [setContentView (I)V]
+  + NameAndType [setListAdapter (Landroid/widget/ListAdapter;)V]
+  + NameAndType [setOnClickListener (Landroid/view/View$OnClickListener;)V]
+  + NameAndType [setOnItemClickListener (Landroid/widget/AdapterView$OnItemClickListener;)V]
+  + NameAndType [setText (Ljava/lang/CharSequence;)V]
+  + NameAndType [startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
+  + NameAndType [stopService (Landroid/content/Intent;)Z]
+  + NameAndType [toString ()Ljava/lang/String;]
+  + NameAndType [valueOf (Ljava/lang/Object;)Ljava/lang/String;]
+  + NameAndType [write ([B)V]
+  + NameAndType [writeBytes (Ljava/lang/String;)V]
+  + Utf8 [
+]
+  + Utf8 [()I]
+  + Utf8 [()Landroid/content/Context;]
+  + Utf8 [()Landroid/content/res/Resources;]
+  + Utf8 [()Landroid/widget/ListView;]
+  + Utf8 [()Ljava/io/File;]
+  + Utf8 [()Ljava/io/OutputStream;]
+  + Utf8 [()Ljava/lang/CharSequence;]
+  + Utf8 [()Ljava/lang/Runtime;]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()V]
+  + Utf8 [()Z]
+  + Utf8 [(I)Landroid/view/View;]
+  + Utf8 [(I)Ljava/io/InputStream;]
+  + Utf8 [(I)V]
+  + Utf8 [(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;]
+  + Utf8 [(Landroid/content/Context;ILjava/util/List;)V]
+  + Utf8 [(Landroid/content/Context;Ljava/lang/Class;)V]
+  + Utf8 [(Landroid/content/Intent;)Landroid/content/ComponentName;]
+  + Utf8 [(Landroid/content/Intent;)Z]
+  + Utf8 [(Landroid/os/Bundle;)V]
+  + Utf8 [(Landroid/view/View$OnClickListener;)V]
+  + Utf8 [(Landroid/view/View;)V]
+  + Utf8 [(Landroid/widget/AdapterView$OnItemClickListener;)V]
+  + Utf8 [(Landroid/widget/ListAdapter;)V]
+  + Utf8 [(Lcom/test/MainActivity;)V]
+  + Utf8 [(Ljava/io/InputStream;)V]
+  + Utf8 [(Ljava/io/OutputStream;)V]
+  + Utf8 [(Ljava/lang/CharSequence;)V]
+  + Utf8 [(Ljava/lang/Object;)Ljava/lang/String;]
+  + Utf8 [(Ljava/lang/Object;)Z]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/Process;]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+  + Utf8 [([B)V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Item 1 ]
+  + Utf8 [Item 2]
+  + Utf8 [Landroid/widget/ArrayAdapter;]
+  + Utf8 [Ljava/io/PrintStream;]
+  + Utf8 [Ljava/lang/String;]
+  + Utf8 [Ljava/util/ArrayList;]
+  + Utf8 [Service Stopped!]
+  + Utf8 [Start]
+  + Utf8 [Start Button Clicked]
+  + Utf8 [Starting Sniffing
+]
+  + Utf8 [Stop]
+  + Utf8 [Stoping Service]
+  + Utf8 [[Ljava/lang/String;]
+  + Utf8 [a]
+  + Utf8 [addCategory]
+  + Utf8 [android.intent.category.DEFAULT]
+  + Utf8 [android/app/ListActivity]
+  + Utf8 [android/content/Context]
+  + Utf8 [android/content/Intent]
+  + Utf8 [android/content/IntentFilter]
+  + Utf8 [android/content/res/Resources]
+  + Utf8 [android/view/View]
+  + Utf8 [android/view/View$OnClickListener]
+  + Utf8 [android/widget/ArrayAdapter]
+  + Utf8 [android/widget/Button]
+  + Utf8 [android/widget/ListView]
+  + Utf8 [append]
+  + Utf8 [available]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [chmod 777 ]
+  + Utf8 [close]
+  + Utf8 [com.test.intent.action.MESSAGE_PROCESSED]
+  + Utf8 [com/test/MainActivity]
+  + Utf8 [com/test/MainActivity$BroadcastPackets]
+  + Utf8 [com/test/SniffingService]
+  + Utf8 [com/test/a]
+  + Utf8 [d]
+  + Utf8 [e]
+  + Utf8 [equals]
+  + Utf8 [exec]
+  + Utf8 [exists]
+  + Utf8 [exit
+]
+  + Utf8 [findViewById]
+  + Utf8 [finish]
+  + Utf8 [flush]
+  + Utf8 [getAbsolutePath]
+  + Utf8 [getApplicationContext]
+  + Utf8 [getFilesDir]
+  + Utf8 [getId]
+  + Utf8 [getListView]
+  + Utf8 [getOutputStream]
+  + Utf8 [getResources]
+  + Utf8 [getRuntime]
+  + Utf8 [getText]
+  + Utf8 [java/io/DataInputStream]
+  + Utf8 [java/io/DataOutputStream]
+  + Utf8 [java/io/File]
+  + Utf8 [java/io/FileOutputStream]
+  + Utf8 [java/io/InputStream]
+  + Utf8 [java/io/PrintStream]
+  + Utf8 [java/lang/Exception]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/Process]
+  + Utf8 [java/lang/Runtime]
+  + Utf8 [java/lang/String]
+  + Utf8 [java/lang/StringBuilder]
+  + Utf8 [java/lang/System]
+  + Utf8 [java/util/ArrayList]
+  + Utf8 [onClick]
+  + Utf8 [onCreate]
+  + Utf8 [onDestroy]
+  + Utf8 [openRawResource]
+  + Utf8 [out]
+  + Utf8 [printStackTrace]
+  + Utf8 [println]
+  + Utf8 [putExtra]
+  + Utf8 [readFully]
+  + Utf8 [registerReceiver]
+  + Utf8 [rm ]
+  + Utf8 [separator]
+  + Utf8 [setContentView]
+  + Utf8 [setListAdapter]
+  + Utf8 [setOnClickListener]
+  + Utf8 [setOnItemClickListener]
+  + Utf8 [setText]
+  + Utf8 [sniff]
+  + Utf8 [startService]
+  + Utf8 [stopService]
+  + Utf8 [su]
+  + Utf8 [toString]
+  + Utf8 [value]
+  + Utf8 [valueOf]
+  + Utf8 [variable]
+  + Utf8 [write]
+  + Utf8 [writeBytes]
+
+Fields (count = 5):
+  + Field:        a Ljava/lang/String;
+    Access flags: 0x9
+      = public static java.lang.String a
+  + Field:        b Ljava/util/ArrayList;
+    Access flags: 0x0
+      = java.util.ArrayList b
+  + Field:        c Ljava/util/ArrayList;
+    Access flags: 0x0
+      = java.util.ArrayList c
+  + Field:        d [Ljava/lang/String;
+    Access flags: 0x0
+      = java.lang.String[] d
+  + Field:        e Landroid/widget/ArrayAdapter;
+    Access flags: 0x0
+      = android.widget.ArrayAdapter e
+
+Methods (count = 4):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public MainActivity()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 45, locals = 1, stack = 5):
+      [0] aload_0 v0
+      [1] invokespecial #58
+        + Methodref [android/app/ListActivity.<init> ()V]
+      [4] aload_0 v0
+      [5] new #50
+        + Class [java/util/ArrayList]
+      [8] dup
+      [9] invokespecial #107
+        + Methodref [java/util/ArrayList.<init> ()V]
+      [12] putfield #52
+        + Fieldref [com/test/MainActivity.b Ljava/util/ArrayList;]
+      [15] aload_0 v0
+      [16] new #50
+        + Class [java/util/ArrayList]
+      [19] dup
+      [20] invokespecial #107
+        + Methodref [java/util/ArrayList.<init> ()V]
+      [23] putfield #53
+        + Fieldref [com/test/MainActivity.c Ljava/util/ArrayList;]
+      [26] aload_0 v0
+      [27] iconst_2
+      [28] anewarray #47
+        + Class [java/lang/String]
+      [31] dup
+      [32] iconst_0
+      [33] ldc #6
+        + String [Item 1 ]
+      [35] aastore
+      [36] dup
+      [37] iconst_1
+      [38] ldc #7
+        + String [Item 2]
+      [40] aastore
+      [41] putfield #54
+        + Fieldref [com/test/MainActivity.d [Ljava/lang/String;]
+      [44] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onCreate(Landroid/os/Bundle;)V
+    Access flags: 0x1
+      = public void onCreate(android.os.Bundle)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 300, locals = 6, stack = 6):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #59
+        + Methodref [android/app/ListActivity.onCreate (Landroid/os/Bundle;)V]
+      [5] aload_0 v0
+      [6] ldc #2
+        + Integer [2130903041]
+      [8] invokevirtual #79
+        + Methodref [com/test/MainActivity.setContentView (I)V]
+      [11] aload_0 v0
+      [12] invokevirtual #76
+        + Methodref [com/test/MainActivity.getApplicationContext ()Landroid/content/Context;]
+      [15] astore_1 v1
+      [16] new #48
+        + Class [java/lang/StringBuilder]
+      [19] dup
+      [20] aload_1 v1
+      [21] invokevirtual #61
+        + Methodref [android/content/Context.getFilesDir ()Ljava/io/File;]
+      [24] invokevirtual #92
+        + Methodref [java/io/File.getAbsolutePath ()Ljava/lang/String;]
+      [27] invokestatic #103
+        + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
+      [30] invokespecial #104
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [33] getstatic #56
+        + Fieldref [java/io/File.separator Ljava/lang/String;]
+      [36] invokevirtual #105
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [39] ldc #19
+        + String [sniff]
+      [41] invokevirtual #105
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [44] invokevirtual #106
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [47] putstatic #51
+        + Fieldref [com/test/MainActivity.a Ljava/lang/String;]
+      [50] aload_0 v0
+      [51] invokevirtual #76
+        + Methodref [com/test/MainActivity.getApplicationContext ()Landroid/content/Context;]
+      [54] getstatic #51
+        + Fieldref [com/test/MainActivity.a Ljava/lang/String;]
+      [57] astore_2 v2
+      [58] invokevirtual #62
+        + Methodref [android/content/Context.getResources ()Landroid/content/res/Resources;]
+      [61] ldc #3
+        + Integer [2130968576]
+      [63] invokevirtual #67
+        + Methodref [android/content/res/Resources.openRawResource (I)Ljava/io/InputStream;]
+      [66] astore_1 v1
+      [67] invokestatic #102
+        + Methodref [java/lang/Runtime.getRuntime ()Ljava/lang/Runtime;]
+      [70] ldc #20
+        + String [su]
+      [72] invokevirtual #101
+        + Methodref [java/lang/Runtime.exec (Ljava/lang/String;)Ljava/lang/Process;]
+      [75] astore_3 v3
+      [76] new #38
+        + Class [java/io/DataOutputStream]
+      [79] dup
+      [80] aload_3 v3
+      [81] invokevirtual #100
+        + Methodref [java/lang/Process.getOutputStream ()Ljava/io/OutputStream;]
+      [84] invokespecial #87
+        + Methodref [java/io/DataOutputStream.<init> (Ljava/io/OutputStream;)V]
+      [87] astore_3 v3
+      [88] new #39
+        + Class [java/io/File]
+      [91] dup
+      [92] aload_2 v2
+      [93] invokespecial #90
+        + Methodref [java/io/File.<init> (Ljava/lang/String;)V]
+      [96] invokevirtual #91
+        + Methodref [java/io/File.exists ()Z]
+      [99] ifeq +28 (target=127)
+      [102] aload_3 v3
+      [103] new #48
+        + Class [java/lang/StringBuilder]
+      [106] dup
+      [107] ldc #18
+        + String [rm ]
+      [109] invokespecial #104
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [112] aload_2 v2
+      [113] invokevirtual #105
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [116] ldc #5
+        + String [
+]
+      [118] invokevirtual #105
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [121] invokevirtual #106
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [124] invokevirtual #89
+        + Methodref [java/io/DataOutputStream.writeBytes (Ljava/lang/String;)V]
+      [127] aload_1 v1
+      [128] invokevirtual #96
+        + Methodref [java/io/InputStream.available ()I]
+      [131] newarray 8
+      [133] astore v4
+      [135] new #40
+        + Class [java/io/FileOutputStream]
+      [138] dup
+      [139] aload_2 v2
+      [140] invokespecial #93
+        + Methodref [java/io/FileOutputStream.<init> (Ljava/lang/String;)V]
+      [143] astore v5
+      [145] new #37
+        + Class [java/io/DataInputStream]
+      [148] dup
+      [149] aload_1 v1
+      [150] invokespecial #85
+        + Methodref [java/io/DataInputStream.<init> (Ljava/io/InputStream;)V]
+      [153] aload v4
+      [155] invokevirtual #86
+        + Methodref [java/io/DataInputStream.readFully ([B)V]
+      [158] aload v5
+      [160] aload v4
+      [162] invokevirtual #95
+        + Methodref [java/io/FileOutputStream.write ([B)V]
+      [165] aload v5
+      [167] invokevirtual #94
+        + Methodref [java/io/FileOutputStream.close ()V]
+      [170] aload_3 v3
+      [171] new #48
+        + Class [java/lang/StringBuilder]
+      [174] dup
+      [175] ldc #15
+        + String [chmod 777 ]
+      [177] invokespecial #104
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [180] aload_2 v2
+      [181] invokevirtual #105
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [184] ldc #5
+        + String [
+]
+      [186] invokevirtual #105
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [189] invokevirtual #106
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [192] invokevirtual #89
+        + Methodref [java/io/DataOutputStream.writeBytes (Ljava/lang/String;)V]
+      [195] aload_3 v3
+      [196] ldc #17
+        + String [exit
+]
+      [198] invokevirtual #89
+        + Methodref [java/io/DataOutputStream.writeBytes (Ljava/lang/String;)V]
+      [201] aload_3 v3
+      [202] invokevirtual #88
+        + Methodref [java/io/DataOutputStream.flush ()V]
+      [205] goto +8 (target=213)
+      [208] aconst_null
+      [209] astore_3 v3
+      [210] invokevirtual #98
+        + Methodref [java/lang/Exception.printStackTrace ()V]
+      [213] aload_0 v0
+      [214] ldc #4
+        + Integer [2131099648]
+      [216] invokevirtual #74
+        + Methodref [com/test/MainActivity.findViewById (I)Landroid/view/View;]
+      [219] checkcast #31
+        + Class [android/widget/Button]
+      [222] aload_0 v0
+      [223] invokevirtual #71
+        + Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
+      [226] aload_0 v0
+      [227] new #30
+        + Class [android/widget/ArrayAdapter]
+      [230] dup
+      [231] aload_0 v0
+      [232] ldc #1
+        + Integer [2130903040]
+      [234] aload_0 v0
+      [235] getfield #52
+        + Fieldref [com/test/MainActivity.b Ljava/util/ArrayList;]
+      [238] invokespecial #69
+        + Methodref [android/widget/ArrayAdapter.<init> (Landroid/content/Context;ILjava/util/List;)V]
+      [241] putfield #55
+        + Fieldref [com/test/MainActivity.e Landroid/widget/ArrayAdapter;]
+      [244] aload_0 v0
+      [245] aload_0 v0
+      [246] getfield #55
+        + Fieldref [com/test/MainActivity.e Landroid/widget/ArrayAdapter;]
+      [249] invokevirtual #80
+        + Methodref [com/test/MainActivity.setListAdapter (Landroid/widget/ListAdapter;)V]
+      [252] aload_0 v0
+      [253] invokevirtual #77
+        + Methodref [com/test/MainActivity.getListView ()Landroid/widget/ListView;]
+      [256] new #36
+        + Class [com/test/a]
+      [259] dup
+      [260] aload_0 v0
+      [261] invokespecial #84
+        + Methodref [com/test/a.<init> (Lcom/test/MainActivity;)V]
+      [264] invokevirtual #73
+        + Methodref [android/widget/ListView.setOnItemClickListener (Landroid/widget/AdapterView$OnItemClickListener;)V]
+      [267] new #26
+        + Class [android/content/IntentFilter]
+      [270] dup
+      [271] ldc #16
+        + String [com.test.intent.action.MESSAGE_PROCESSED]
+      [273] invokespecial #65
+        + Methodref [android/content/IntentFilter.<init> (Ljava/lang/String;)V]
+      [276] dup
+      [277] astore_1 v1
+      [278] ldc #14
+        + String [android.intent.category.DEFAULT]
+      [280] invokevirtual #66
+        + Methodref [android/content/IntentFilter.addCategory (Ljava/lang/String;)V]
+      [283] new #34
+        + Class [com/test/MainActivity$BroadcastPackets]
+      [286] dup
+      [287] aload_0 v0
+      [288] invokespecial #83
+        + Methodref [com/test/MainActivity$BroadcastPackets.<init> (Lcom/test/MainActivity;)V]
+      [291] astore_2 v2
+      [292] aload_0 v0
+      [293] aload_2 v2
+      [294] aload_1 v1
+      [295] invokevirtual #78
+        + Methodref [com/test/MainActivity.registerReceiver (Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;]
+      [298] pop
+      [299] return
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (67 -> 205: 208):
+      + Class [java/lang/Exception]
+      Code attribute attributes (attribute count = 0):
+  + Method:       onClick(Landroid/view/View;)V
+    Access flags: 0x1
+      = public void onClick(android.view.View)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 147, locals = 2, stack = 4):
+      [0] aload_1 v1
+      [1] invokevirtual #68
+        + Methodref [android/view/View.getId ()I]
+      [4] tableswitch (1 offsets, default=142) (target=146)
+        2131099648: offset = 20, target = 24
+        default: offset = 142, target = 146
+      [24] aload_0 v0
+      [25] ldc #4
+        + Integer [2131099648]
+      [27] invokevirtual #74
+        + Methodref [com/test/MainActivity.findViewById (I)Landroid/view/View;]
+      [30] checkcast #31
+        + Class [android/widget/Button]
+      [33] dup
+      [34] astore_1 v1
+      [35] invokevirtual #70
+        + Methodref [android/widget/Button.getText ()Ljava/lang/CharSequence;]
+      [38] ldc #9
+        + String [Start]
+      [40] invokevirtual #99
+        + Methodref [java/lang/Object.equals (Ljava/lang/Object;)Z]
+      [43] ifeq +52 (target=95)
+      [46] aload_1 v1
+      [47] ldc #12
+        + String [Stop]
+      [49] invokevirtual #72
+        + Methodref [android/widget/Button.setText (Ljava/lang/CharSequence;)V]
+      [52] getstatic #57
+        + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+      [55] ldc #11
+        + String [Starting Sniffing
+]
+      [57] invokevirtual #97
+        + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+      [60] getstatic #57
+        + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+      [63] ldc #10
+        + String [Start Button Clicked]
+      [65] invokevirtual #97
+        + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+      [68] new #25
+        + Class [android/content/Intent]
+      [71] dup
+      [72] aload_0 v0
+      [73] ldc #35
+        + Class [com/test/SniffingService]
+      [75] invokespecial #63
+        + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+      [78] dup
+      [79] astore_1 v1
+      [80] ldc #22
+        + String [variable]
+      [82] ldc #21
+        + String [value]
+      [84] invokevirtual #64
+        + Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+      [87] pop
+      [88] aload_0 v0
+      [89] aload_1 v1
+      [90] invokevirtual #81
+        + Methodref [com/test/MainActivity.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
+      [93] pop
+      [94] return
+      [95] aload_1 v1
+      [96] invokevirtual #70
+        + Methodref [android/widget/Button.getText ()Ljava/lang/CharSequence;]
+      [99] ldc #12
+        + String [Stop]
+      [101] invokevirtual #99
+        + Methodref [java/lang/Object.equals (Ljava/lang/Object;)Z]
+      [104] ifeq +42 (target=146)
+      [107] aload_1 v1
+      [108] ldc #9
+        + String [Start]
+      [110] invokevirtual #72
+        + Methodref [android/widget/Button.setText (Ljava/lang/CharSequence;)V]
+      [113] new #25
+        + Class [android/content/Intent]
+      [116] dup
+      [117] aload_0 v0
+      [118] ldc #35
+        + Class [com/test/SniffingService]
+      [120] invokespecial #63
+        + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+      [123] astore_1 v1
+      [124] getstatic #57
+        + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+      [127] ldc #13
+        + String [Stoping Service]
+      [129] invokevirtual #97
+        + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+      [132] aload_0 v0
+      [133] aload_1 v1
+      [134] invokevirtual #82
+        + Methodref [com/test/MainActivity.stopService (Landroid/content/Intent;)Z]
+      [137] pop
+      [138] getstatic #57
+        + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+      [141] ldc #8
+        + String [Service Stopped!]
+      [143] invokevirtual #97
+        + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+      [146] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onDestroy()V
+    Access flags: 0x1
+      = public void onDestroy()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 9, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #60
+        + Methodref [android/app/ListActivity.onDestroy ()V]
+      [4] aload_0 v0
+      [5] invokevirtual #75
+        + Methodref [com/test/MainActivity.finish ()V]
+      [8] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/test/a
+  Superclass:    java/lang/Object
+  Major version: 0x31
+  Minor version: 0x0
+  Access flags:  0x30
+    = final class com.test.a extends java.lang.Object
+
+Interfaces (count = 1):
+  + Class [android/widget/AdapterView$OnItemClickListener]
+
+Constant Pool (count = 85):
+  + String [
+]
+  + String [Details]
+  + Class [android/app/AlertDialog$Builder]
+  + Class [android/widget/AdapterView$OnItemClickListener]
+  + Class [com/test/MainActivity]
+  + Class [com/test/a]
+  + Class [com/test/b]
+  + Class [java/lang/Object]
+  + Class [java/lang/String]
+  + Class [java/lang/StringBuilder]
+  + Class [java/util/ArrayList]
+  + Fieldref [com/test/MainActivity.b Ljava/util/ArrayList;]
+  + Fieldref [com/test/a.a Lcom/test/MainActivity;]
+  + Fieldref [com/test/b.b Ljava/lang/String;]
+  + Fieldref [com/test/b.c Ljava/lang/String;]
+  + Fieldref [com/test/b.d Ljava/lang/String;]
+  + Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
+  + Methodref [android/app/AlertDialog$Builder.setCancelable (Z)Landroid/app/AlertDialog$Builder;]
+  + Methodref [android/app/AlertDialog$Builder.setMessage (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
+  + Methodref [android/app/AlertDialog$Builder.setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
+  + Methodref [android/app/AlertDialog$Builder.show ()Landroid/app/AlertDialog;]
+  + Methodref [java/lang/Object.<init> ()V]
+  + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
+  + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+  + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  + Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Landroid/content/Context;)V]
+  + NameAndType [<init> (Ljava/lang/String;)V]
+  + NameAndType [a Lcom/test/MainActivity;]
+  + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + NameAndType [b Ljava/lang/String;]
+  + NameAndType [b Ljava/util/ArrayList;]
+  + NameAndType [c Ljava/lang/String;]
+  + NameAndType [d Ljava/lang/String;]
+  + NameAndType [get (I)Ljava/lang/Object;]
+  + NameAndType [setCancelable (Z)Landroid/app/AlertDialog$Builder;]
+  + NameAndType [setMessage (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
+  + NameAndType [setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
+  + NameAndType [show ()Landroid/app/AlertDialog;]
+  + NameAndType [toString ()Ljava/lang/String;]
+  + NameAndType [valueOf (Ljava/lang/Object;)Ljava/lang/String;]
+  + Utf8 [
+]
+  + Utf8 [()Landroid/app/AlertDialog;]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()V]
+  + Utf8 [(I)Ljava/lang/Object;]
+  + Utf8 [(Landroid/content/Context;)V]
+  + Utf8 [(Landroid/widget/AdapterView;Landroid/view/View;IJ)V]
+  + Utf8 [(Lcom/test/MainActivity;)V]
+  + Utf8 [(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
+  + Utf8 [(Ljava/lang/Object;)Ljava/lang/String;]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Z)Landroid/app/AlertDialog$Builder;]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Details]
+  + Utf8 [Lcom/test/MainActivity;]
+  + Utf8 [Ljava/lang/String;]
+  + Utf8 [Ljava/util/ArrayList;]
+  + Utf8 [a]
+  + Utf8 [android/app/AlertDialog$Builder]
+  + Utf8 [android/widget/AdapterView$OnItemClickListener]
+  + Utf8 [append]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [com/test/MainActivity]
+  + Utf8 [com/test/a]
+  + Utf8 [com/test/b]
+  + Utf8 [d]
+  + Utf8 [get]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/String]
+  + Utf8 [java/lang/StringBuilder]
+  + Utf8 [java/util/ArrayList]
+  + Utf8 [onItemClick]
+  + Utf8 [setCancelable]
+  + Utf8 [setMessage]
+  + Utf8 [setTitle]
+  + Utf8 [show]
+  + Utf8 [toString]
+  + Utf8 [valueOf]
+
+Fields (count = 1):
+  + Field:        a Lcom/test/MainActivity;
+    Access flags: 0x1010
+      = final synthetic com.test.MainActivity a
+
+Methods (count = 2):
+  - Method:       <init>(Lcom/test/MainActivity;)V
+    Access flags: 0x0
+      = a(com.test.MainActivity)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 10, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #13
+        + Fieldref [com/test/a.a Lcom/test/MainActivity;]
+      [5] aload_0 v0
+      [6] invokespecial #22
+        + Methodref [java/lang/Object.<init> ()V]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    Access flags: 0x11
+      = public final void onItemClick(android.widget.AdapterView,android.view.View,int,long)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 177, locals = 6, stack = 3):
+      [0] aload_0 v0
+      [1] getfield #13
+        + Fieldref [com/test/a.a Lcom/test/MainActivity;]
+      [4] getfield #12
+        + Fieldref [com/test/MainActivity.b Ljava/util/ArrayList;]
+      [7] iload_3 v3
+      [8] invokevirtual #27
+        + Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
+      [11] checkcast #7
+        + Class [com/test/b]
+      [14] getfield #14
+        + Fieldref [com/test/b.b Ljava/lang/String;]
+      [17] astore_1 v1
+      [18] aload_0 v0
+      [19] getfield #13
+        + Fieldref [com/test/a.a Lcom/test/MainActivity;]
+      [22] getfield #12
+        + Fieldref [com/test/MainActivity.b Ljava/util/ArrayList;]
+      [25] iload_3 v3
+      [26] invokevirtual #27
+        + Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
+      [29] checkcast #7
+        + Class [com/test/b]
+      [32] getfield #15
+        + Fieldref [com/test/b.c Ljava/lang/String;]
+      [35] ifnull +48 (target=83)
+      [38] new #10
+        + Class [java/lang/StringBuilder]
+      [41] dup
+      [42] aload_1 v1
+      [43] invokestatic #23
+        + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
+      [46] invokespecial #24
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [49] ldc #1
+        + String [
+]
+      [51] invokevirtual #25
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [54] aload_0 v0
+      [55] getfield #13
+        + Fieldref [com/test/a.a Lcom/test/MainActivity;]
+      [58] getfield #12
+        + Fieldref [com/test/MainActivity.b Ljava/util/ArrayList;]
+      [61] iload_3 v3
+      [62] invokevirtual #27
+        + Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
+      [65] checkcast #7
+        + Class [com/test/b]
+      [68] getfield #15
+        + Fieldref [com/test/b.c Ljava/lang/String;]
+      [71] invokevirtual #25
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [74] ldc #1
+        + String [
+]
+      [76] invokevirtual #25
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [79] invokevirtual #26
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [82] astore_1 v1
+      [83] aload_0 v0
+      [84] getfield #13
+        + Fieldref [com/test/a.a Lcom/test/MainActivity;]
+      [87] getfield #12
+        + Fieldref [com/test/MainActivity.b Ljava/util/ArrayList;]
+      [90] iload_3 v3
+      [91] invokevirtual #27
+        + Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
+      [94] checkcast #7
+        + Class [com/test/b]
+      [97] getfield #16
+        + Fieldref [com/test/b.d Ljava/lang/String;]
+      [100] ifnull +48 (target=148)
+      [103] new #10
+        + Class [java/lang/StringBuilder]
+      [106] dup
+      [107] aload_1 v1
+      [108] invokestatic #23
+        + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
+      [111] invokespecial #24
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [114] ldc #1
+        + String [
+]
+      [116] invokevirtual #25
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [119] aload_0 v0
+      [120] getfield #13
+        + Fieldref [com/test/a.a Lcom/test/MainActivity;]
+      [123] getfield #12
+        + Fieldref [com/test/MainActivity.b Ljava/util/ArrayList;]
+      [126] iload_3 v3
+      [127] invokevirtual #27
+        + Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
+      [130] checkcast #7
+        + Class [com/test/b]
+      [133] getfield #16
+        + Fieldref [com/test/b.d Ljava/lang/String;]
+      [136] invokevirtual #25
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [139] ldc #1
+        + String [
+]
+      [141] invokevirtual #25
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [144] invokevirtual #26
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [147] astore_1 v1
+      [148] new #3
+        + Class [android/app/AlertDialog$Builder]
+      [151] dup
+      [152] aload_0 v0
+      [153] getfield #13
+        + Fieldref [com/test/a.a Lcom/test/MainActivity;]
+      [156] invokespecial #17
+        + Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
+      [159] aload_1 v1
+      [160] invokevirtual #19
+        + Methodref [android/app/AlertDialog$Builder.setMessage (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
+      [163] ldc #2
+        + String [Details]
+      [165] invokevirtual #20
+        + Methodref [android/app/AlertDialog$Builder.setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
+      [168] iconst_1
+      [169] invokevirtual #18
+        + Methodref [android/app/AlertDialog$Builder.setCancelable (Z)Landroid/app/AlertDialog$Builder;]
+      [172] invokevirtual #21
+        + Methodref [android/app/AlertDialog$Builder.show ()Landroid/app/AlertDialog;]
+      [175] pop
+      [176] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/test/MainActivity$BroadcastPackets
+  Superclass:    android/content/BroadcastReceiver
+  Major version: 0x31
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.test.MainActivity$BroadcastPackets extends android.content.BroadcastReceiver
+
+Interfaces (count = 0):
+
+Constant Pool (count = 94):
+  + String [Broadcast Received]
+  + String [Received: ]
+  + String [header]
+  + String [payload]
+  + String [ports]
+  + String [protocol]
+  + Class [android/content/BroadcastReceiver]
+  + Class [android/content/Intent]
+  + Class [android/widget/ArrayAdapter]
+  + Class [com/test/MainActivity]
+  + Class [com/test/MainActivity$BroadcastPackets]
+  + Class [com/test/b]
+  + Class [java/io/PrintStream]
+  + Class [java/lang/StringBuilder]
+  + Class [java/lang/System]
+  + Class [java/util/ArrayList]
+  + Fieldref [com/test/MainActivity.b Ljava/util/ArrayList;]
+  + Fieldref [com/test/MainActivity.e Landroid/widget/ArrayAdapter;]
+  + Fieldref [com/test/MainActivity$BroadcastPackets.a Lcom/test/MainActivity;]
+  + Fieldref [com/test/b.a Ljava/lang/String;]
+  + Fieldref [com/test/b.b Ljava/lang/String;]
+  + Fieldref [com/test/b.c Ljava/lang/String;]
+  + Fieldref [com/test/b.d Ljava/lang/String;]
+  + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+  + Methodref [android/content/BroadcastReceiver.<init> ()V]
+  + Methodref [android/content/Intent.getStringExtra (Ljava/lang/String;)Ljava/lang/String;]
+  + Methodref [android/widget/ArrayAdapter.notifyDataSetChanged ()V]
+  + Methodref [com/test/b.<init> ()V]
+  + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+  + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+  + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
+  + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  + Methodref [java/util/ArrayList.add (Ljava/lang/Object;)Z]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Ljava/lang/String;)V]
+  + NameAndType [a Lcom/test/MainActivity;]
+  + NameAndType [a Ljava/lang/String;]
+  + NameAndType [add (Ljava/lang/Object;)Z]
+  + NameAndType [append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
+  + NameAndType [b Ljava/lang/String;]
+  + NameAndType [b Ljava/util/ArrayList;]
+  + NameAndType [c Ljava/lang/String;]
+  + NameAndType [d Ljava/lang/String;]
+  + NameAndType [e Landroid/widget/ArrayAdapter;]
+  + NameAndType [getStringExtra (Ljava/lang/String;)Ljava/lang/String;]
+  + NameAndType [notifyDataSetChanged ()V]
+  + NameAndType [out Ljava/io/PrintStream;]
+  + NameAndType [println (Ljava/lang/String;)V]
+  + NameAndType [toString ()Ljava/lang/String;]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()V]
+  + Utf8 [(Landroid/content/Context;Landroid/content/Intent;)V]
+  + Utf8 [(Lcom/test/MainActivity;)V]
+  + Utf8 [(Ljava/lang/Object;)Ljava/lang/StringBuilder;]
+  + Utf8 [(Ljava/lang/Object;)Z]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/String;]
+  + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [<init>]
+  + Utf8 [Broadcast Received]
+  + Utf8 [Code]
+  + Utf8 [Landroid/widget/ArrayAdapter;]
+  + Utf8 [Lcom/test/MainActivity;]
+  + Utf8 [Ljava/io/PrintStream;]
+  + Utf8 [Ljava/lang/String;]
+  + Utf8 [Ljava/util/ArrayList;]
+  + Utf8 [Received: ]
+  + Utf8 [a]
+  + Utf8 [add]
+  + Utf8 [android/content/BroadcastReceiver]
+  + Utf8 [android/content/Intent]
+  + Utf8 [android/widget/ArrayAdapter]
+  + Utf8 [append]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [com/test/MainActivity]
+  + Utf8 [com/test/MainActivity$BroadcastPackets]
+  + Utf8 [com/test/b]
+  + Utf8 [d]
+  + Utf8 [e]
+  + Utf8 [getStringExtra]
+  + Utf8 [header]
+  + Utf8 [java/io/PrintStream]
+  + Utf8 [java/lang/StringBuilder]
+  + Utf8 [java/lang/System]
+  + Utf8 [java/util/ArrayList]
+  + Utf8 [notifyDataSetChanged]
+  + Utf8 [onReceive]
+  + Utf8 [out]
+  + Utf8 [payload]
+  + Utf8 [ports]
+  + Utf8 [println]
+  + Utf8 [protocol]
+  + Utf8 [toString]
+
+Fields (count = 1):
+  + Field:        a Lcom/test/MainActivity;
+    Access flags: 0x1010
+      = final synthetic com.test.MainActivity a
+
+Methods (count = 2):
+  - Method:       <init>(Lcom/test/MainActivity;)V
+    Access flags: 0x1
+      = public MainActivity$BroadcastPackets(com.test.MainActivity)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 10, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #19
+        + Fieldref [com/test/MainActivity$BroadcastPackets.a Lcom/test/MainActivity;]
+      [5] aload_0 v0
+      [6] invokespecial #25
+        + Methodref [android/content/BroadcastReceiver.<init> ()V]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    Access flags: 0x1
+      = public void onReceive(android.content.Context,android.content.Intent)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 101, locals = 3, stack = 4):
+      [0] getstatic #24
+        + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+      [3] ldc #1
+        + String [Broadcast Received]
+      [5] invokevirtual #29
+        + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+      [8] new #12
+        + Class [com/test/b]
+      [11] dup
+      [12] invokespecial #28
+        + Methodref [com/test/b.<init> ()V]
+      [15] astore_1 v1
+      [16] getstatic #24
+        + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+      [19] new #14
+        + Class [java/lang/StringBuilder]
+      [22] dup
+      [23] ldc #2
+        + String [Received: ]
+      [25] invokespecial #30
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [28] aload_1 v1
+      [29] invokevirtual #31
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
+      [32] invokevirtual #32
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [35] invokevirtual #29
+        + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+      [38] aload_1 v1
+      [39] aload_2 v2
+      [40] ldc #3
+        + String [header]
+      [42] invokevirtual #26
+        + Methodref [android/content/Intent.getStringExtra (Ljava/lang/String;)Ljava/lang/String;]
+      [45] putfield #20
+        + Fieldref [com/test/b.a Ljava/lang/String;]
+      [48] aload_1 v1
+      [49] aload_2 v2
+      [50] ldc #6
+        + String [protocol]
+      [52] invokevirtual #26
+        + Methodref [android/content/Intent.getStringExtra (Ljava/lang/String;)Ljava/lang/String;]
+      [55] putfield #21
+        + Fieldref [com/test/b.b Ljava/lang/String;]
+      [58] aload_1 v1
+      [59] aload_2 v2
+      [60] ldc #5
+        + String [ports]
+      [62] invokevirtual #26
+        + Methodref [android/content/Intent.getStringExtra (Ljava/lang/String;)Ljava/lang/String;]
+      [65] putfield #22
+        + Fieldref [com/test/b.c Ljava/lang/String;]
+      [68] aload_1 v1
+      [69] aload_2 v2
+      [70] ldc #4
+        + String [payload]
+      [72] invokevirtual #26
+        + Methodref [android/content/Intent.getStringExtra (Ljava/lang/String;)Ljava/lang/String;]
+      [75] putfield #23
+        + Fieldref [com/test/b.d Ljava/lang/String;]
+      [78] aload_0 v0
+      [79] getfield #19
+        + Fieldref [com/test/MainActivity$BroadcastPackets.a Lcom/test/MainActivity;]
+      [82] getfield #17
+        + Fieldref [com/test/MainActivity.b Ljava/util/ArrayList;]
+      [85] aload_1 v1
+      [86] invokevirtual #33
+        + Methodref [java/util/ArrayList.add (Ljava/lang/Object;)Z]
+      [89] pop
+      [90] aload_0 v0
+      [91] getfield #19
+        + Fieldref [com/test/MainActivity$BroadcastPackets.a Lcom/test/MainActivity;]
+      [94] getfield #18
+        + Fieldref [com/test/MainActivity.e Landroid/widget/ArrayAdapter;]
+      [97] invokevirtual #27
+        + Methodref [android/widget/ArrayAdapter.notifyDataSetChanged ()V]
+      [100] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/test/b
+  Superclass:    java/lang/Object
+  Major version: 0x31
+  Minor version: 0x0
+  Access flags:  0x31
+    = public final class com.test.b extends java.lang.Object
+
+Interfaces (count = 0):
+
+Constant Pool (count = 19):
+  + Class [com/test/b]
+  + Class [java/lang/Object]
+  + Fieldref [com/test/b.a Ljava/lang/String;]
+  + Methodref [java/lang/Object.<init> ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [a Ljava/lang/String;]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Ljava/lang/String;]
+  + Utf8 [a]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [com/test/b]
+  + Utf8 [d]
+  + Utf8 [java/lang/Object]
+  + Utf8 [toString]
+
+Fields (count = 4):
+  + Field:        a Ljava/lang/String;
+    Access flags: 0x1
+      = public java.lang.String a
+  + Field:        b Ljava/lang/String;
+    Access flags: 0x1
+      = public java.lang.String b
+  + Field:        c Ljava/lang/String;
+    Access flags: 0x1
+      = public java.lang.String c
+  + Field:        d Ljava/lang/String;
+    Access flags: 0x1
+      = public java.lang.String d
+
+Methods (count = 2):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public b()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #4
+        + Methodref [java/lang/Object.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       toString()Ljava/lang/String;
+    Access flags: 0x11
+      = public final java.lang.String toString()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] getfield #3
+        + Fieldref [com/test/b.a Ljava/lang/String;]
+      [4] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/test/c
+  Superclass:    java/lang/Object
+  Major version: 0x31
+  Minor version: 0x0
+  Access flags:  0x31
+    = public final class com.test.c extends java.lang.Object
+
+Interfaces (count = 0):
+
+Constant Pool (count = 77):
+  + String []
+  + String [Finding payload for packet: ]
+  + String [Parsed Packet: ]
+  + String [Parsing Packet]
+  + String [\|]
+  + String []= ]
+  + String [charAt(0) is #]
+  + String [line read is null]
+  + String [parsed_packet[]
+  + Class [com/test/c]
+  + Class [java/io/PrintStream]
+  + Class [java/lang/Object]
+  + Class [java/lang/String]
+  + Class [java/lang/StringBuilder]
+  + Class [java/lang/System]
+  + Fieldref [com/test/c.a [Ljava/lang/String;]
+  + Fieldref [com/test/c.b Ljava/lang/String;]
+  + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+  + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+  + Methodref [java/lang/Object.<init> ()V]
+  + Methodref [java/lang/String.charAt (I)C]
+  + Methodref [java/lang/String.split (Ljava/lang/String;)[Ljava/lang/String;]
+  + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
+  + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+  + Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
+  + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Ljava/lang/String;)V]
+  + NameAndType [a [Ljava/lang/String;]
+  + NameAndType [append (I)Ljava/lang/StringBuilder;]
+  + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + NameAndType [b Ljava/lang/String;]
+  + NameAndType [charAt (I)C]
+  + NameAndType [out Ljava/io/PrintStream;]
+  + NameAndType [println (Ljava/lang/String;)V]
+  + NameAndType [split (Ljava/lang/String;)[Ljava/lang/String;]
+  + NameAndType [toString ()Ljava/lang/String;]
+  + NameAndType [valueOf (Ljava/lang/Object;)Ljava/lang/String;]
+  + Utf8 []
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()V]
+  + Utf8 [(I)C]
+  + Utf8 [(I)Ljava/lang/StringBuilder;]
+  + Utf8 [(Ljava/lang/Object;)Ljava/lang/String;]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;)[Ljava/lang/String;]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Finding payload for packet: ]
+  + Utf8 [Ljava/io/PrintStream;]
+  + Utf8 [Ljava/lang/String;]
+  + Utf8 [Parsed Packet: ]
+  + Utf8 [Parsing Packet]
+  + Utf8 [[Ljava/lang/String;]
+  + Utf8 [\|]
+  + Utf8 []= ]
+  + Utf8 [a]
+  + Utf8 [append]
+  + Utf8 [b]
+  + Utf8 [charAt]
+  + Utf8 [charAt(0) is #]
+  + Utf8 [com/test/c]
+  + Utf8 [java/io/PrintStream]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/String]
+  + Utf8 [java/lang/StringBuilder]
+  + Utf8 [java/lang/System]
+  + Utf8 [line read is null]
+  + Utf8 [out]
+  + Utf8 [parsed_packet[]
+  + Utf8 [println]
+  + Utf8 [split]
+  + Utf8 [toString]
+  + Utf8 [valueOf]
+
+Fields (count = 2):
+  + Field:        a [Ljava/lang/String;
+    Access flags: 0x0
+      = java.lang.String[] a
+  + Field:        b Ljava/lang/String;
+    Access flags: 0x0
+      = java.lang.String b
+
+Methods (count = 2):
+  - Method:       <init>(Ljava/lang/String;)V
+    Access flags: 0x1
+      = public c(java.lang.String)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 131, locals = 2, stack = 4):
+      [0] aload_0 v0
+      [1] invokespecial #20
+        + Methodref [java/lang/Object.<init> ()V]
+      [4] aload_0 v0
+      [5] aload_1 v1
+      [6] putfield #17
+        + Fieldref [com/test/c.b Ljava/lang/String;]
+      [9] aload_1 v1
+      [10] ifnull +107 (target=117)
+      [13] aload_1 v1
+      [14] iconst_0
+      [15] invokevirtual #21
+        + Methodref [java/lang/String.charAt (I)C]
+      [18] bipush 35
+      [20] ificmpne +17 (target=37)
+      [23] getstatic #18
+        + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+      [26] ldc #7
+        + String [charAt(0) is #]
+      [28] invokevirtual #19
+        + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+      [31] aload_0 v0
+      [32] aconst_null
+      [33] putfield #16
+        + Fieldref [com/test/c.a [Ljava/lang/String;]
+      [36] return
+      [37] getstatic #18
+        + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+      [40] ldc #4
+        + String [Parsing Packet]
+      [42] invokevirtual #19
+        + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+      [45] aload_0 v0
+      [46] aload_1 v1
+      [47] ldc #5
+        + String [\|]
+      [49] invokevirtual #22
+        + Methodref [java/lang/String.split (Ljava/lang/String;)[Ljava/lang/String;]
+      [52] putfield #16
+        + Fieldref [com/test/c.a [Ljava/lang/String;]
+      [55] getstatic #18
+        + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+      [58] ldc #3
+        + String [Parsed Packet: ]
+      [60] invokevirtual #19
+        + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+      [63] iconst_0
+      [64] istore_1 v1
+      [65] goto +42 (target=107)
+      [68] getstatic #18
+        + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+      [71] new #14
+        + Class [java/lang/StringBuilder]
+      [74] dup
+      [75] ldc #9
+        + String [parsed_packet[]
+      [77] invokespecial #24
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [80] iload_1 v1
+      [81] invokevirtual #25
+        + Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
+      [84] ldc #6
+        + String []= ]
+      [86] invokevirtual #26
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [89] aload_0 v0
+      [90] getfield #16
+        + Fieldref [com/test/c.a [Ljava/lang/String;]
+      [93] iload_1 v1
+      [94] aaload
+      [95] invokevirtual #26
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [98] invokevirtual #27
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [101] invokevirtual #19
+        + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+      [104] iinc v1, 1
+      [107] iload_1 v1
+      [108] aload_0 v0
+      [109] getfield #16
+        + Fieldref [com/test/c.a [Ljava/lang/String;]
+      [112] arraylength
+      [113] ificmplt -45 (target=68)
+      [116] return
+      [117] getstatic #18
+        + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+      [120] ldc #8
+        + String [line read is null]
+      [122] invokevirtual #19
+        + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+      [125] aload_0 v0
+      [126] aconst_null
+      [127] putfield #16
+        + Fieldref [com/test/c.a [Ljava/lang/String;]
+      [130] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a()Ljava/lang/String;
+    Access flags: 0x11
+      = public final java.lang.String a()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 121, locals = 3, stack = 4):
+      [0] getstatic #18
+        + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+      [3] new #14
+        + Class [java/lang/StringBuilder]
+      [6] dup
+      [7] ldc #2
+        + String [Finding payload for packet: ]
+      [9] invokespecial #24
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [12] aload_0 v0
+      [13] getfield #17
+        + Fieldref [com/test/c.b Ljava/lang/String;]
+      [16] invokevirtual #26
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [19] invokevirtual #27
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [22] invokevirtual #19
+        + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+      [25] aload_0 v0
+      [26] getfield #16
+        + Fieldref [com/test/c.a [Ljava/lang/String;]
+      [29] arraylength
+      [30] iconst_4
+      [31] ificmplt +27 (target=58)
+      [34] aload_0 v0
+      [35] getfield #16
+        + Fieldref [com/test/c.a [Ljava/lang/String;]
+      [38] iconst_3
+      [39] aaload
+      [40] ifnull +18 (target=58)
+      [43] aload_0 v0
+      [44] getfield #16
+        + Fieldref [com/test/c.a [Ljava/lang/String;]
+      [47] iconst_3
+      [48] aaload
+      [49] iconst_1
+      [50] invokevirtual #21
+        + Methodref [java/lang/String.charAt (I)C]
+      [53] bipush 35
+      [55] ificmpne +5 (target=60)
+      [58] aconst_null
+      [59] areturn
+      [60] ldc #1
+        + String []
+      [62] astore_1 v1
+      [63] iconst_3
+      [64] istore_2 v2
+      [65] goto +45 (target=110)
+      [68] aload_0 v0
+      [69] getfield #16
+        + Fieldref [com/test/c.a [Ljava/lang/String;]
+      [72] iload_2 v2
+      [73] aaload
+      [74] iconst_1
+      [75] invokevirtual #21
+        + Methodref [java/lang/String.charAt (I)C]
+      [78] bipush 35
+      [80] ificmpne +27 (target=107)
+      [83] new #14
+        + Class [java/lang/StringBuilder]
+      [86] dup
+      [87] aload_1 v1
+      [88] invokestatic #23
+        + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
+      [91] invokespecial #24
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [94] aload_0 v0
+      [95] getfield #16
+        + Fieldref [com/test/c.a [Ljava/lang/String;]
+      [98] iload_2 v2
+      [99] aaload
+      [100] invokevirtual #26
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [103] invokevirtual #27
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [106] astore_1 v1
+      [107] iinc v2, 1
+      [110] iload_2 v2
+      [111] aload_0 v0
+      [112] getfield #16
+        + Fieldref [com/test/c.a [Ljava/lang/String;]
+      [115] arraylength
+      [116] ificmplt -48 (target=68)
+      [119] aload_1 v1
+      [120] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/test/SniffingService
+  Superclass:    android/app/IntentService
+  Major version: 0x31
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.test.SniffingService extends android.app.IntentService
+
+Interfaces (count = 0):
+
+Constant Pool (count = 178):
+  + String ["]
+  + String [Broadcast Send..]
+  + String [Destoying Process]
+  + String [Finding header for packet: ]
+  + String [Finding payload for packet: ]
+  + String [Finding protocol for packet: ]
+  + String [Process Destroyed]
+  + String [Sending Broadcast..]
+  + String [SniffingService]
+  + String [SniffingService called]
+  + String [SniffingService not running because: ]
+  + String [android.intent.category.DEFAULT]
+  + String [com.test.intent.action.MESSAGE_PROCESSED]
+  + String [header]
+  + String [line read: ]
+  + String [packet]
+  + String [payload]
+  + String [ports]
+  + String [protocol]
+  + String [su -c "]
+  + Class [android/app/IntentService]
+  + Class [android/content/Intent]
+  + Class [com/test/MainActivity]
+  + Class [com/test/SniffingService]
+  + Class [com/test/c]
+  + Class [java/io/BufferedReader]
+  + Class [java/io/BufferedWriter]
+  + Class [java/io/InputStreamReader]
+  + Class [java/io/OutputStreamWriter]
+  + Class [java/io/PrintStream]
+  + Class [java/lang/Exception]
+  + Class [java/lang/Process]
+  + Class [java/lang/Runtime]
+  + Class [java/lang/String]
+  + Class [java/lang/StringBuilder]
+  + Class [java/lang/System]
+  + Fieldref [com/test/MainActivity.a Ljava/lang/String;]
+  + Fieldref [com/test/SniffingService.a Ljava/lang/Process;]
+  + Fieldref [com/test/SniffingService.b Ljava/lang/String;]
+  + Fieldref [com/test/SniffingService.c Lcom/test/c;]
+  + Fieldref [com/test/c.a [Ljava/lang/String;]
+  + Fieldref [com/test/c.b Ljava/lang/String;]
+  + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+  + Methodref [android/app/IntentService.<init> (Ljava/lang/String;)V]
+  + Methodref [android/content/Intent.<init> ()V]
+  + Methodref [android/content/Intent.addCategory (Ljava/lang/String;)Landroid/content/Intent;]
+  + Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+  + Methodref [android/content/Intent.setAction (Ljava/lang/String;)Landroid/content/Intent;]
+  + Methodref [com/test/SniffingService.sendBroadcast (Landroid/content/Intent;)V]
+  + Methodref [com/test/c.<init> (Ljava/lang/String;)V]
+  + Methodref [com/test/c.a ()Ljava/lang/String;]
+  + Methodref [java/io/BufferedReader.<init> (Ljava/io/Reader;)V]
+  + Methodref [java/io/BufferedReader.readLine ()Ljava/lang/String;]
+  + Methodref [java/io/BufferedWriter.<init> (Ljava/io/Writer;)V]
+  + Methodref [java/io/InputStreamReader.<init> (Ljava/io/InputStream;)V]
+  + Methodref [java/io/OutputStreamWriter.<init> (Ljava/io/OutputStream;)V]
+  + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+  + Methodref [java/lang/Exception.printStackTrace ()V]
+  + Methodref [java/lang/Exception.toString ()Ljava/lang/String;]
+  + Methodref [java/lang/Process.destroy ()V]
+  + Methodref [java/lang/Process.getInputStream ()Ljava/io/InputStream;]
+  + Methodref [java/lang/Process.getOutputStream ()Ljava/io/OutputStream;]
+  + Methodref [java/lang/Runtime.exec (Ljava/lang/String;)Ljava/lang/Process;]
+  + Methodref [java/lang/Runtime.getRuntime ()Ljava/lang/Runtime;]
+  + Methodref [java/lang/String.charAt (I)C]
+  + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+  + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Ljava/io/InputStream;)V]
+  + NameAndType [<init> (Ljava/io/OutputStream;)V]
+  + NameAndType [<init> (Ljava/io/Reader;)V]
+  + NameAndType [<init> (Ljava/io/Writer;)V]
+  + NameAndType [<init> (Ljava/lang/String;)V]
+  + NameAndType [a ()Ljava/lang/String;]
+  + NameAndType [a Ljava/lang/Process;]
+  + NameAndType [a Ljava/lang/String;]
+  + NameAndType [a [Ljava/lang/String;]
+  + NameAndType [addCategory (Ljava/lang/String;)Landroid/content/Intent;]
+  + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + NameAndType [b Ljava/lang/String;]
+  + NameAndType [c Lcom/test/c;]
+  + NameAndType [charAt (I)C]
+  + NameAndType [destroy ()V]
+  + NameAndType [exec (Ljava/lang/String;)Ljava/lang/Process;]
+  + NameAndType [getInputStream ()Ljava/io/InputStream;]
+  + NameAndType [getOutputStream ()Ljava/io/OutputStream;]
+  + NameAndType [getRuntime ()Ljava/lang/Runtime;]
+  + NameAndType [out Ljava/io/PrintStream;]
+  + NameAndType [printStackTrace ()V]
+  + NameAndType [println (Ljava/lang/String;)V]
+  + NameAndType [putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+  + NameAndType [readLine ()Ljava/lang/String;]
+  + NameAndType [sendBroadcast (Landroid/content/Intent;)V]
+  + NameAndType [setAction (Ljava/lang/String;)Landroid/content/Intent;]
+  + NameAndType [toString ()Ljava/lang/String;]
+  + Utf8 ["]
+  + Utf8 [()Ljava/io/InputStream;]
+  + Utf8 [()Ljava/io/OutputStream;]
+  + Utf8 [()Ljava/lang/Runtime;]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()V]
+  + Utf8 [(I)C]
+  + Utf8 [(Landroid/content/Intent;)V]
+  + Utf8 [(Ljava/io/InputStream;)V]
+  + Utf8 [(Ljava/io/OutputStream;)V]
+  + Utf8 [(Ljava/io/Reader;)V]
+  + Utf8 [(Ljava/io/Writer;)V]
+  + Utf8 [(Ljava/lang/String;)Landroid/content/Intent;]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/Process;]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+  + Utf8 [<clinit>]
+  + Utf8 [<init>]
+  + Utf8 [Broadcast Send..]
+  + Utf8 [Code]
+  + Utf8 [Destoying Process]
+  + Utf8 [Finding header for packet: ]
+  + Utf8 [Finding payload for packet: ]
+  + Utf8 [Finding protocol for packet: ]
+  + Utf8 [Lcom/test/c;]
+  + Utf8 [Ljava/io/PrintStream;]
+  + Utf8 [Ljava/lang/Process;]
+  + Utf8 [Ljava/lang/String;]
+  + Utf8 [Process Destroyed]
+  + Utf8 [Sending Broadcast..]
+  + Utf8 [SniffingService]
+  + Utf8 [SniffingService called]
+  + Utf8 [SniffingService not running because: ]
+  + Utf8 [[Ljava/lang/String;]
+  + Utf8 [a]
+  + Utf8 [addCategory]
+  + Utf8 [android.intent.category.DEFAULT]
+  + Utf8 [android/app/IntentService]
+  + Utf8 [android/content/Intent]
+  + Utf8 [append]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [charAt]
+  + Utf8 [com.test.intent.action.MESSAGE_PROCESSED]
+  + Utf8 [com/test/MainActivity]
+  + Utf8 [com/test/SniffingService]
+  + Utf8 [com/test/c]
+  + Utf8 [destroy]
+  + Utf8 [exec]
+  + Utf8 [getInputStream]
+  + Utf8 [getOutputStream]
+  + Utf8 [getRuntime]
+  + Utf8 [header]
+  + Utf8 [java/io/BufferedReader]
+  + Utf8 [java/io/BufferedWriter]
+  + Utf8 [java/io/InputStreamReader]
+  + Utf8 [java/io/OutputStreamWriter]
+  + Utf8 [java/io/PrintStream]
+  + Utf8 [java/lang/Exception]
+  + Utf8 [java/lang/Process]
+  + Utf8 [java/lang/Runtime]
+  + Utf8 [java/lang/String]
+  + Utf8 [java/lang/StringBuilder]
+  + Utf8 [java/lang/System]
+  + Utf8 [line read: ]
+  + Utf8 [onDestroy]
+  + Utf8 [onHandleIntent]
+  + Utf8 [out]
+  + Utf8 [packet]
+  + Utf8 [payload]
+  + Utf8 [ports]
+  + Utf8 [printStackTrace]
+  + Utf8 [println]
+  + Utf8 [protocol]
+  + Utf8 [putExtra]
+  + Utf8 [readLine]
+  + Utf8 [sendBroadcast]
+  + Utf8 [setAction]
+  + Utf8 [su -c "]
+  + Utf8 [toString]
+
+Fields (count = 3):
+  + Field:        a Ljava/lang/Process;
+    Access flags: 0x0
+      = java.lang.Process a
+  + Field:        b Ljava/lang/String;
+    Access flags: 0x9
+      = public static java.lang.String b
+  + Field:        c Lcom/test/c;
+    Access flags: 0x0
+      = com.test.c c
+
+Methods (count = 4):
+  - Method:       <clinit>()V
+    Access flags: 0x8
+      = static void <clinit>()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 6, locals = 0, stack = 1):
+      [0] ldc #16
+        + String [packet]
+      [2] putstatic #39
+        + Fieldref [com/test/SniffingService.b Ljava/lang/String;]
+      [5] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public SniffingService()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 7, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] ldc #9
+        + String [SniffingService]
+      [3] invokespecial #44
+        + Methodref [android/app/IntentService.<init> (Ljava/lang/String;)V]
+      [6] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onHandleIntent(Landroid/content/Intent;)V
+    Access flags: 0x4
+      = protected void onHandleIntent(android.content.Intent)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 471, locals = 4, stack = 6):
+      [0] getstatic #43
+        + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+      [3] ldc #10
+        + String [SniffingService called]
+      [5] invokevirtual #57
+        + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+      [8] aload_0 v0
+      [9] invokestatic #64
+        + Methodref [java/lang/Runtime.getRuntime ()Ljava/lang/Runtime;]
+      [12] new #35
+        + Class [java/lang/StringBuilder]
+      [15] dup
+      [16] ldc #20
+        + String [su -c "]
+      [18] invokespecial #66
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [21] getstatic #37
+        + Fieldref [com/test/MainActivity.a Ljava/lang/String;]
+      [24] invokevirtual #67
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [27] ldc #1
+        + String ["]
+      [29] invokevirtual #67
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [32] invokevirtual #68
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [35] invokevirtual #63
+        + Methodref [java/lang/Runtime.exec (Ljava/lang/String;)Ljava/lang/Process;]
+      [38] putfield #38
+        + Fieldref [com/test/SniffingService.a Ljava/lang/Process;]
+      [41] new #27
+        + Class [java/io/BufferedWriter]
+      [44] new #29
+        + Class [java/io/OutputStreamWriter]
+      [47] dup
+      [48] aload_0 v0
+      [49] getfield #38
+        + Fieldref [com/test/SniffingService.a Ljava/lang/Process;]
+      [52] invokevirtual #62
+        + Methodref [java/lang/Process.getOutputStream ()Ljava/io/OutputStream;]
+      [55] invokespecial #56
+        + Methodref [java/io/OutputStreamWriter.<init> (Ljava/io/OutputStream;)V]
+      [58] invokespecial #54
+        + Methodref [java/io/BufferedWriter.<init> (Ljava/io/Writer;)V]
+      [61] aconst_null
+      [62] astore_1 v1
+      [63] new #26
+        + Class [java/io/BufferedReader]
+      [66] dup
+      [67] new #28
+        + Class [java/io/InputStreamReader]
+      [70] dup
+      [71] aload_0 v0
+      [72] getfield #38
+        + Fieldref [com/test/SniffingService.a Ljava/lang/Process;]
+      [75] invokevirtual #61
+        + Methodref [java/lang/Process.getInputStream ()Ljava/io/InputStream;]
+      [78] invokespecial #55
+        + Methodref [java/io/InputStreamReader.<init> (Ljava/io/InputStream;)V]
+      [81] invokespecial #52
+        + Methodref [java/io/BufferedReader.<init> (Ljava/io/Reader;)V]
+      [84] astore_1 v1
+      [85] aconst_null
+      [86] astore_2 v2
+      [87] goto +343 (target=430)
+      [90] getstatic #43
+        + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+      [93] new #35
+        + Class [java/lang/StringBuilder]
+      [96] dup
+      [97] ldc #15
+        + String [line read: ]
+      [99] invokespecial #66
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [102] aload_2 v2
+      [103] invokevirtual #67
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [106] invokevirtual #68
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [109] invokevirtual #57
+        + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+      [112] aload_0 v0
+      [113] new #25
+        + Class [com/test/c]
+      [116] dup
+      [117] aload_2 v2
+      [118] invokespecial #50
+        + Methodref [com/test/c.<init> (Ljava/lang/String;)V]
+      [121] putfield #40
+        + Fieldref [com/test/SniffingService.c Lcom/test/c;]
+      [124] aload_0 v0
+      [125] getfield #40
+        + Fieldref [com/test/SniffingService.c Lcom/test/c;]
+      [128] getfield #41
+        + Fieldref [com/test/c.a [Ljava/lang/String;]
+      [131] ifnull +299 (target=430)
+      [134] new #22
+        + Class [android/content/Intent]
+      [137] dup
+      [138] invokespecial #45
+        + Methodref [android/content/Intent.<init> ()V]
+      [141] dup
+      [142] astore_2 v2
+      [143] ldc #13
+        + String [com.test.intent.action.MESSAGE_PROCESSED]
+      [145] invokevirtual #48
+        + Methodref [android/content/Intent.setAction (Ljava/lang/String;)Landroid/content/Intent;]
+      [148] pop
+      [149] aload_2 v2
+      [150] ldc #12
+        + String [android.intent.category.DEFAULT]
+      [152] invokevirtual #46
+        + Methodref [android/content/Intent.addCategory (Ljava/lang/String;)Landroid/content/Intent;]
+      [155] pop
+      [156] aload_2 v2
+      [157] ldc #14
+        + String [header]
+      [159] aload_0 v0
+      [160] getfield #40
+        + Fieldref [com/test/SniffingService.c Lcom/test/c;]
+      [163] astore_3 v3
+      [164] getstatic #43
+        + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+      [167] new #35
+        + Class [java/lang/StringBuilder]
+      [170] dup
+      [171] ldc #4
+        + String [Finding header for packet: ]
+      [173] invokespecial #66
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [176] aload_3 v3
+      [177] getfield #42
+        + Fieldref [com/test/c.b Ljava/lang/String;]
+      [180] invokevirtual #67
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [183] invokevirtual #68
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [186] invokevirtual #57
+        + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+      [189] aload_3 v3
+      [190] getfield #41
+        + Fieldref [com/test/c.a [Ljava/lang/String;]
+      [193] arraylength
+      [194] ifle +27 (target=221)
+      [197] aload_3 v3
+      [198] getfield #41
+        + Fieldref [com/test/c.a [Ljava/lang/String;]
+      [201] iconst_0
+      [202] aaload
+      [203] ifnull +18 (target=221)
+      [206] aload_3 v3
+      [207] getfield #41
+        + Fieldref [com/test/c.a [Ljava/lang/String;]
+      [210] iconst_0
+      [211] aaload
+      [212] iconst_1
+      [213] invokevirtual #65
+        + Methodref [java/lang/String.charAt (I)C]
+      [216] bipush 35
+      [218] ificmpne +7 (target=225)
+      [221] aconst_null
+      [222] goto +9 (target=231)
+      [225] aload_3 v3
+      [226] getfield #41
+        + Fieldref [com/test/c.a [Ljava/lang/String;]
+      [229] iconst_0
+      [230] aaload
+      [231] invokevirtual #47
+        + Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+      [234] pop
+      [235] aload_2 v2
+      [236] ldc #19
+        + String [protocol]
+      [238] aload_0 v0
+      [239] getfield #40
+        + Fieldref [com/test/SniffingService.c Lcom/test/c;]
+      [242] astore_3 v3
+      [243] getstatic #43
+        + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+      [246] new #35
+        + Class [java/lang/StringBuilder]
+      [249] dup
+      [250] ldc #6
+        + String [Finding protocol for packet: ]
+      [252] invokespecial #66
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [255] aload_3 v3
+      [256] getfield #42
+        + Fieldref [com/test/c.b Ljava/lang/String;]
+      [259] invokevirtual #67
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [262] invokevirtual #68
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [265] invokevirtual #57
+        + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+      [268] aload_3 v3
+      [269] getfield #41
+        + Fieldref [com/test/c.a [Ljava/lang/String;]
+      [272] arraylength
+      [273] iconst_2
+      [274] ificmplt +27 (target=301)
+      [277] aload_3 v3
+      [278] getfield #41
+        + Fieldref [com/test/c.a [Ljava/lang/String;]
+      [281] iconst_0
+      [282] aaload
+      [283] ifnull +18 (target=301)
+      [286] aload_3 v3
+      [287] getfield #41
+        + Fieldref [com/test/c.a [Ljava/lang/String;]
+      [290] iconst_1
+      [291] aaload
+      [292] iconst_1
+      [293] invokevirtual #65
+        + Methodref [java/lang/String.charAt (I)C]
+      [296] bipush 35
+      [298] ificmpne +7 (target=305)
+      [301] aconst_null
+      [302] goto +9 (target=311)
+      [305] aload_3 v3
+      [306] getfield #41
+        + Fieldref [com/test/c.a [Ljava/lang/String;]
+      [309] iconst_1
+      [310] aaload
+      [311] invokevirtual #47
+        + Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+      [314] pop
+      [315] aload_2 v2
+      [316] ldc #18
+        + String [ports]
+      [318] aload_0 v0
+      [319] getfield #40
+        + Fieldref [com/test/SniffingService.c Lcom/test/c;]
+      [322] astore_3 v3
+      [323] getstatic #43
+        + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+      [326] new #35
+        + Class [java/lang/StringBuilder]
+      [329] dup
+      [330] ldc #5
+        + String [Finding payload for packet: ]
+      [332] invokespecial #66
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [335] aload_3 v3
+      [336] getfield #42
+        + Fieldref [com/test/c.b Ljava/lang/String;]
+      [339] invokevirtual #67
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [342] invokevirtual #68
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [345] invokevirtual #57
+        + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+      [348] aload_3 v3
+      [349] getfield #41
+        + Fieldref [com/test/c.a [Ljava/lang/String;]
+      [352] arraylength
+      [353] iconst_3
+      [354] ificmplt +27 (target=381)
+      [357] aload_3 v3
+      [358] getfield #41
+        + Fieldref [com/test/c.a [Ljava/lang/String;]
+      [361] iconst_2
+      [362] aaload
+      [363] ifnull +18 (target=381)
+      [366] aload_3 v3
+      [367] getfield #41
+        + Fieldref [com/test/c.a [Ljava/lang/String;]
+      [370] iconst_2
+      [371] aaload
+      [372] iconst_1
+      [373] invokevirtual #65
+        + Methodref [java/lang/String.charAt (I)C]
+      [376] bipush 35
+      [378] ificmpne +7 (target=385)
+      [381] aconst_null
+      [382] goto +9 (target=391)
+      [385] aload_3 v3
+      [386] getfield #41
+        + Fieldref [com/test/c.a [Ljava/lang/String;]
+      [389] iconst_2
+      [390] aaload
+      [391] invokevirtual #47
+        + Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+      [394] pop
+      [395] aload_2 v2
+      [396] ldc #17
+        + String [payload]
+      [398] aload_0 v0
+      [399] getfield #40
+        + Fieldref [com/test/SniffingService.c Lcom/test/c;]
+      [402] invokevirtual #51
+        + Methodref [com/test/c.a ()Ljava/lang/String;]
+      [405] invokevirtual #47
+        + Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+      [408] pop
+      [409] getstatic #43
+        + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+      [412] ldc #8
+        + String [Sending Broadcast..]
+      [414] invokevirtual #57
+        + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+      [417] aload_0 v0
+      [418] aload_2 v2
+      [419] invokevirtual #49
+        + Methodref [com/test/SniffingService.sendBroadcast (Landroid/content/Intent;)V]
+      [422] getstatic #43
+        + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+      [425] ldc #2
+        + String [Broadcast Send..]
+      [427] invokevirtual #57
+        + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+      [430] aload_1 v1
+      [431] invokevirtual #53
+        + Methodref [java/io/BufferedReader.readLine ()Ljava/lang/String;]
+      [434] dup
+      [435] astore_2 v2
+      [436] ifnonnull -346 (target=90)
+      [439] return
+      [440] dup
+      [441] astore_1 v1
+      [442] invokevirtual #58
+        + Methodref [java/lang/Exception.printStackTrace ()V]
+      [445] getstatic #43
+        + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+      [448] new #35
+        + Class [java/lang/StringBuilder]
+      [451] dup
+      [452] ldc #11
+        + String [SniffingService not running because: ]
+      [454] invokespecial #66
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [457] aload_1 v1
+      [458] invokevirtual #59
+        + Methodref [java/lang/Exception.toString ()Ljava/lang/String;]
+      [461] invokevirtual #67
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [464] invokevirtual #68
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [467] invokevirtual #57
+        + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+      [470] return
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (8 -> 439: 440):
+      + Class [java/lang/Exception]
+      Code attribute attributes (attribute count = 0):
+  + Method:       onDestroy()V
+    Access flags: 0x1
+      = public void onDestroy()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 24, locals = 1, stack = 2):
+      [0] getstatic #43
+        + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+      [3] ldc #3
+        + String [Destoying Process]
+      [5] invokevirtual #57
+        + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+      [8] aload_0 v0
+      [9] getfield #38
+        + Fieldref [com/test/SniffingService.a Ljava/lang/Process;]
+      [12] invokevirtual #60
+        + Methodref [java/lang/Process.destroy ()V]
+      [15] getstatic #43
+        + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+      [18] ldc #7
+        + String [Process Destroyed]
+      [20] invokevirtual #57
+        + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+      [23] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+

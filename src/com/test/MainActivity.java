@@ -53,8 +53,11 @@ public class MainActivity extends ListActivity implements OnClickListener
               // When clicked, show a toast with the TextView text
             	
             	String Body=Packets.get(position).protocol;
+            	if(Packets.get(position).ports!=null){
+            		Body=Body+"\n"+Packets.get(position).ports+"\n";
+            	}
             	if(Packets.get(position).payload!=null){
-            		Body=Body+"\n"+"Payload:" +Packets.get(position).payload+"\n";
+            		Body=Body+"\n"+Packets.get(position).payload+"\n";
             	}
             	  
             	 AlertDialog.Builder asd= new AlertDialog.Builder(MainActivity.this);  
@@ -116,6 +119,7 @@ public class MainActivity extends ListActivity implements OnClickListener
 			//tv.append(text);
 			packet.header = intent.getStringExtra("header");
 			packet.protocol = intent.getStringExtra("protocol");
+			packet.ports=intent.getStringExtra("ports");
 			packet.payload = intent.getStringExtra("payload");
 	//		packet.header=intent.getStringExtra("line");
 			Packets.add(packet);

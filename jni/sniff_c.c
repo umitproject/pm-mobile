@@ -204,7 +204,7 @@ void callback(u_char *args,const struct pcap_pkthdr *header, const u_char *packe
 			printf("Protocol:IP | ");
 			return;
 		default:
-			printf("Protocol: Unknown o.O | ");
+			printf("Protocol: Unknown | ");
 			return;
 	}
 	tcp=(struct sniff_tcp*)(packet + SIZE_ETHERNET + size_ip);
@@ -220,9 +220,8 @@ void callback(u_char *args,const struct pcap_pkthdr *header, const u_char *packe
 	size_payload=ntohs(ip->ip_len)-(size_ip+size_tcp);
 
 	if(size_payload>0){
-		printf("#Payload(%d)bytes\n",size_payload);
-		printf("Payload: ");
-		print_payload(payload,size_payload);
+		printf("Payload size : %d",size_payload);
+	//	print_payload(payload,size_payload);
 	}
 }
 int sniff()

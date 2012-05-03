@@ -15,17 +15,25 @@ public class Helper  {
 		InputStream is=c.getResources().openRawResource(resource);
         try {
         	
-       // 	Toast.makeText(c, "Copying file",Toast.LENGTH_SHORT).show();
+        	Process process = Runtime.getRuntime().exec("su");
+            DataOutputStream os = new DataOutputStream(process.getOutputStream());
+            File sniff=new File(path);
+            if(sniff.exists())
+            {
+            	os.writeBytes("rm " + path+ "\n");
+            }
             byte[] bytes = new byte[is.available()];
+            
+            
+            FileOutputStream setdbOutStream = new FileOutputStream(path);
             DataInputStream dis = new DataInputStream(is);
             dis.readFully(bytes);   
 
-            FileOutputStream setdbOutStream = new FileOutputStream(path);
+            
             setdbOutStream.write(bytes);
             setdbOutStream.close();
 
-            Process process = Runtime.getRuntime().exec("su");
-            DataOutputStream os = new DataOutputStream(process.getOutputStream());
+            
             os.writeBytes("chmod 777 " + path+ "\n");
             os.writeBytes("exit\n");
             os.flush();

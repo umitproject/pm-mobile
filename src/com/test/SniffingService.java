@@ -47,6 +47,7 @@ public class SniffingService extends IntentService{
             broadcastIntent.addCategory(Intent.CATEGORY_DEFAULT);
         	broadcastIntent.putExtra("header", parser.header());
         	broadcastIntent.putExtra("protocol", parser.protocol());
+        	broadcastIntent.putExtra("ports", parser.ports());
             broadcastIntent.putExtra("payload", parser.payload());
     //    	broadcastIntent.putExtra("line", line);
         	
